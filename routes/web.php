@@ -23,8 +23,8 @@ Route::get('/list_products', function () {
     return view('list_products');
 });
 
-Route::get('/fiche_products', function () {
-    return view('fiche_products');
+Route::get('/fiche_products/{k}', function ($k) {
+    return view('fiche_products')->with('fiche_products', $k);
 });
 
 Route::get('/panier', function () {

@@ -77,7 +77,7 @@
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
-                <a href="{{ url('/fiche_products') }}">Fiche Produits</a>
+                <a href="{{ url('/fiche_products/') }}">Fiche Produits</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
 
@@ -90,7 +90,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Fiche Produits
+          Produits: {{$fiche_products}}
         </div>
 
         <div class="links">
