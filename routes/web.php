@@ -12,9 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/list_products', function () {
+    return view('list_products');
+});
+
+Route::get('/fiche_products', function () {
+    return view('fiche_products');
+});
+
+Route::get('/panier', function () {
+    return view('panier');
+});
