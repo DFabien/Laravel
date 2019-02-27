@@ -10,23 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Basics routes
 
-Route::get('/', function () {
-  return view('welcome');
-});
+Route::get('/', 'BasicController@index'); // route vers l'index du site
 
-Auth::routes();
+Route::get('/contact', 'BasicController@contact'); // route vers la page contact
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/livraison', 'BasicController@delivery'); // route vers la age livraison
 
-Route::get('/list_products', function () {
-    return view('list_products');
-});
 
-Route::get('/fiche_products/{k}', function ($k) {
-    return view('fiche_products')->with('fiche_products', $k);
-});
+// Products routes
 
-Route::get('/panier', function () {
-    return view('panier');
-});
+
+// Basket routes
+
+
+// User routes
