@@ -1,13 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: fabien.dobon
- * Date: 27/02/2019
- * Time: 10:08
- */
-?>
-
-        <!doctype html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -74,23 +65,12 @@
 </head>
 <body>
 
-<div class="flex-center position-ref full-height">
-@include('include.navbar')
+    @yield('header')
 
-    <div class="content">
-        <div class="title m-b-md">
-            @yield('content')
-        </div>
+    @yield('content')
 
-        <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-        </div>
-    </div>
-</div>
+    @yield('footer')
+
+
 </body>
 </html>
