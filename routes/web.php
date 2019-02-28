@@ -47,3 +47,44 @@ Route :: get('/mon-compte/suppression/{id}','UserController@index'); // route ve
 Route :: get('/mes-commandes', 'UserController@showOrdersAll');//route vers la page "Mes Commandes"
 
 Route :: get('/ma-commande/{id}', 'UserController@showOrder');// route vers la page "Commande"
+
+
+//Admin Routes
+
+Route::get('/admin/categories', 'AdminController@showCatAll');
+
+Route::get('/admin/categories/add', 'AdminController@addCat');
+
+Route::get('/admin/categories/edit/{id}', 'AdminController@updateCat');
+
+Route::get('/admin/categories/delete/{id}', 'AdminController@deleteCat');
+
+Route::get('/admin/produits', 'AdminController@showProdsAll');
+
+Route::get('/admin/produit/{id}', 'AdminController@showProd');
+
+Route::get('/admin/produit/add', 'AdminController@addProd');
+
+Route::get('/admin/produit/edit/{id}', 'AdminController@updateProd');
+
+Route::get('/admin/produit/delete/{id}', 'AdminController@deleteProd');
+
+Route::get('/admin/discount', 'AdminController@showDiscAll');
+
+Route::get('/admin/discount/add', 'AdminController@addDiscount');
+
+Route::get('/admin/discount/update', 'AdminController@updateDiscout');
+
+Route::get('/admin/discount/delete/{id}', 'AdminController@deleteDiscount');
+
+Route::get('/admin/delivery', 'AdminController@showDelivAll');
+
+Route::get('/admin/historique/commande/{id}', 'AdminController@historicOrder');
+
+Route::get('/admin/historique/detail/{id}', 'AdminController@detailOrder');
+
+Route::get('/admin/users', 'AdminController@showUsersAll');
+
+Route::get('/admin/user/order/{id}', 'AdminController@orderUser');
+
+Route::get('/admin/user/detail/order/{id}', 'AdminController@orderDetUser');
