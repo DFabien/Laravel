@@ -1,15 +1,13 @@
-<html>
-<head>
-    <title>Ce Produit</title>
-</head>
+@extends('layouts/layout')
 
-    <body>
-        <h1>Ce Produit</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus consequatur ducimus explicabo, fugit iusto
-            labore laborum maiores modi nesciunt obcaecati officiis quis quod sapiente similique sint tenetur unde vel?
-        </p>
+@section('title')
+    Ce Produit
+@endsection
 
-    </body>
+@section('content')
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus consequatur ducimus explicabo, fugit iusto
+        labore laborum maiores modi nesciunt obcaecati officiis quis quod sapiente similique sint tenetur unde vel?
+    </p>
+    @endsection
 
-</html>
