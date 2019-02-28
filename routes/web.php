@@ -44,6 +44,6 @@ Route :: get('/mon-compte/modification', 'UserController@updateAccount');//route
 
 Route :: get('/mon-compte/suppression/{id}','UserController@index'); // route vers la page Accueil
 
-Route :: get('/mes-commandes', 'UserController@showOrderAll');//route vers la page "Mes Commandes"
+Route :: get('/mes-commandes', 'UserController@showOrdersAll');//route vers la page "Mes Commandes"
 
 Route :: get('/ma-commande/{id}', 'UserController@showOrder');// route vers la page "Commande"
