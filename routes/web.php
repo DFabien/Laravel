@@ -20,9 +20,12 @@ Route::get('/livraison', 'BasicController@delivery'); // route vers la age livra
 
 
 // Products routes
+Route::get('/produits', 'ProductController@showAll' ); // route vers la liste des produits
 
+Route::get('/produit/{id}','ProductController@show'); //route vers un produit unique
 
 // Basket routes
 
 
 // User routes
+
