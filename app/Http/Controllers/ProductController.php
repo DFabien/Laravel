@@ -6,5 +6,11 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    //
+    public function showAll(){
+        return view('products/product');
+    }
+    public function show($id){
+
+        return view('products/description');
+    }
 }
