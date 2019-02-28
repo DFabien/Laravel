@@ -26,3 +26,12 @@ Route::get('/livraison', 'BasicController@delivery'); // route vers la age livra
 
 
 // User routes
+Route :: get('/mon-compte', 'UserController@profil');// route vers la page " Mon compte"
+
+Route :: get('/mon-compte/modification', 'UserController@updateAccount');//route vers la page "Mon compte"
+
+Route :: get('/mon-compte/suppression/{id}','UserController@index'); // route vers la page Accueil
+
+Route :: get('/mes-commandes', 'UserController@showOrderAll');//route vers la page "Mes commandes"
+
+Route :: get('/ma-commande/{id}', 'UserController@showOrder');// route vers la page "Commande"
