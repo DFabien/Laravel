@@ -2,13 +2,13 @@
 
         <ul class="navbar-nav footerNav">
             <li class="nav-item">
-                <a class="nav-link" href="/produits">Nos produits</a>
+                <a class="nav-link" href="{{route('products')}}">Nos produits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/livraison">Livraison</a>
+                <a class="nav-link" href="{{route('delivery')}}">Livraison</a>
             </li>
         </ul>
 

@@ -12,79 +12,87 @@
 */
 // Basics routes
 
-Route::get('/', 'BasicController@index'); // route vers l'index du site
+Route::get('/', 'BasicController@index')->name('homepage'); // route vers l'index du site
 
-Route::get('/contact', 'BasicController@contact'); // route vers la page contact
+Route::get('/contact', 'BasicController@contact')->name('contact'); // route vers la page contact
 
-Route::get('/livraison', 'BasicController@delivery'); // route vers la page livraison
+Route::get('/livraison', 'BasicController@delivery')->name('delivery'); // route vers la page livraison
 
 
 // Products routes
-Route::get('/produits', 'ProductController@showAll' ); // route vers la liste des produits
+Route::get('/produits', 'ProductController@showAll' )->name('products'); // route vers la liste des produits
 
-Route::get('/produit/{id}','ProductController@show'); //route vers un produit unique
+Route::get('/produit/{id}','ProductController@show')->name('produtct'); //route vers un produit unique
 
 // Basket routes
 
-Route::get('/panier', 'BasketController@show'); // route vers 
+Route::prefix('panier')->group(function () {
 
-Route::get('/panier/modification', 'BasketController@update'); // route vers 
+    Route::get('/', 'BasketController@show')->name('basket'); // route vers le panier
 
-Route::get('/panier/suppression/{id}', 'BasketController@delete'); // route vers 
+    Route::get('modification', 'BasketController@update')->name('basketUpdate'); // route vers
 
-Route::get('/panier/{codePromo}', 'BasketController@discount'); // route vers 
+    Route::get('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
 
-Route::get('/panier/ajout/{id}', 'BasketController@add'); // route vers 
+    Route::get('{codePromo}', 'BasketController@discount')->name('basketDiscount'); // route vers
 
+    Route::get('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
+});
 
 // User routes
-Route :: get('/mon-compte', 'UserController@profil');// route vers la page " Mon compte"
 
-Route :: get('/mon-compte/modification', 'UserController@updateAccount');//route vers la page "Mon compte"
+Route::prefix('mon-compte')->group(function () {
+    Route:: get('/', 'UserController@profil')->name('userAccount');// route vers la page " Mon compte"
 
-Route :: get('/mon-compte/suppression/{id}','UserController@index'); // route vers la page Accueil
+    Route:: get('modification', 'UserController@updateAccount')->name('userUpdate');//route vers la page "Mon compte"
 
-Route :: get('/mes-commandes', 'UserController@showOrdersAll');//route vers la page "Mes Commandes"
+    Route:: get('suppression/{id}', 'UserController@index')->name('userDelete'); // route vers la page Accueil
+});
 
-Route :: get('/ma-commande/{id}', 'UserController@showOrder');// route vers la page "Commande"
+Route :: get('/mes-commandes', 'UserController@showOrdersAll')->name('orders');//route vers la page "Mes Commandes"
+
+Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// route vers la page "Commande"
 
 
 //Admin Routes
 
-Route::get('/admin/categories', 'AdminController@showCatAll');
+Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
+    Route::get('categories', 'AdminController@showCatAll')->name('adminCategories');
 
-Route::get('/admin/categories/add', 'AdminController@addCat');
+    Route::get('categories/add', 'AdminController@addCat')->name('adminCategoryAdd');
 
-Route::get('/admin/categories/edit/{id}', 'AdminController@updateCat');
+    Route::get('categories/edit/{id}', 'AdminController@updateCat')->name('adminCategoryEdit');
 
-Route::get('/admin/categories/delete/{id}', 'AdminController@deleteCat');
+    Route::get('categories/delete/{id}', 'AdminController@deleteCat')->name('adminCategoryDelete');
 
-Route::get('/admin/produits', 'AdminController@showProdsAll');
+    Route::get('produits', 'AdminController@showProdsAll')->name('adminProducts');
 
-Route::get('/admin/produit/add', 'AdminController@addProd');
+    Route::get('produit/add', 'AdminController@addProd')->name('adminProductAdd');
 
-Route::get('/admin/produit/{id}', 'AdminController@showProd');
+    Route::get('produit/{id}', 'AdminController@showProd')->name('adminProduct');
 
-Route::get('/admin/produit/edit/{id}', 'AdminController@updateProd');
+    Route::get('produit/edit/{id}', 'AdminController@updateProd')->name('adminEdit');
 
-Route::get('/admin/produit/delete/{id}', 'AdminController@deleteProd');
+    Route::get('produit/delete/{id}', 'AdminController@deleteProd')->name('adminProductDelete');
 
-Route::get('/admin/discount', 'AdminController@showDiscAll');
+    Route::get('discount', 'AdminController@showDiscAll')->name('adminDiscount');
 
-Route::get('/admin/discount/add', 'AdminController@addDiscount');
+    Route::get('discount/add', 'AdminController@addDiscount')->name('adminDiscountAdd');
 
-Route::get('/admin/discount/update', 'AdminController@updateDiscount');
+    Route::get('discount/edit', 'AdminController@updateDiscount')->name('adminDiscountEdit');
 
-Route::get('/admin/delete/discount/{id}', 'AdminController@deleteDiscount');
+    Route::get('discount/delete/{id}', 'AdminController@deleteDiscount')->name('adminDiscountDelete');
 
-Route::get('/admin/delivery', 'AdminController@showDelivAll');
+    Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
 
-Route::get('/admin/historique/commande/{id}', 'AdminController@historicOrder');
+    Route::get('historique/commande/{id}', 'AdminController@historicOrder')->name('adminOrders');
 
-Route::get('/admin/historique/detail/{id}', 'AdminController@detailOrder');
+    Route::get('historique/detail/{id}', 'AdminController@detailOrder')->name('adminOrder');
 
-Route::get('/admin/users', 'AdminController@showUsersAll');
+    Route::get('users', 'AdminController@showUsersAll')->name('adminUsers');
 
-Route::get('/admin/user/order/{id}', 'AdminController@orderUser');
+    Route::get('user/order/{id}', 'AdminController@orderUser')->name('adminUser');
 
-Route::get('/admin/user/detail/order/{id}', 'AdminController@orderDetailUser');
+    Route::get('user/detail/order/{id}', 'AdminController@orderDetUser')->name('adminOrderUser');
+});
+
