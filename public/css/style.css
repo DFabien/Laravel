@@ -74,6 +74,17 @@ h2.titre-secondaire{
     padding-left: 4%;
 }
 
+.emballage .row{
+    padding: 20px;
+    margin: 20px;
+}
+.livraison h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.livraison h3{
+    margin-top: 15px;
+}
 
 
 /******************************************************************
