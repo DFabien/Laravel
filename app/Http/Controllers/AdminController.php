@@ -7,80 +7,80 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function showCatAll(){
-        return view('/admin/categories');
+        return view('Admin/category');
     }
 
     public function addCat(){
-        return view('/admin/categories/add');
+        return view('Admin/addCategory');
     }
 
     public function updateCat($id){
-        return view('/admin/categories/edit/{id}');
+        return view('Admin/updateCategory');
     }
 
     public function deleteCat($id){
-        return view('/admin/categories');
+        return view('Admin/category');
     }
 
 
     public function showProdsAll(){
-        return view('/admin/produits');
+        return view('Admin/listProducts');
     }
 
-    public function showProd(){
-        return view('/admin/produit/{id}');
+    public function showProd($id){
+        return view('Admin/showProduct');
     }
 
     public function addProd(){
-        return view('/admin/produit/add');
+        return view('Admin/addProduct');
     }
 
     public function updateProd(){
-        return view('/admin/produit/edit/{id}');
+        return view('Admin/updateProduct');
     }
 
-    public function delteProd(){
-        return view('/admin/produits');
+    public function deleteProd(){
+        return view('Admin/showProduct');
     }
 
     public function showDiscAll(){
-        return view('/admin/discount');
+        return view('Admin/discount');
     }
 
     public function addDiscount(){
-        return view('/admin/discount/add');
+        return view('Admin/addDiscount');
     }
 
     public function updateDiscount(){
-        return view('/admin/discount/edit');
+        return view('Admin/updateDiscount');
     }
 
-    public function deleteDiscount(){
-        return view('/admin/discount');
+    public function deleteDiscount($id){
+        return view('Admin/discount');
     }
 
     public function showDelivAll(){
-        return view('/admin/delivery');
+        return view('Admin/delivery');
     }
 
     public function historicOrder(){
-        return view('/admin/historique/commande');
+        return view('Admin/historicOrder');
     }
 
     public function detailOrder($id){
-        return view('/admin/historique/detail/{id}');
+        return view('Admin/historicDetail');
     }
 
     public function showUsersAll(){
-        return view('/admin/users');
+        return view('Admin/users');
     }
 
     public function orderUser($id){
-        return view('/admin/users/order/{id}');
+        return view('Admin/orderUser');
     }
 
-    public function orderDuser (){
-        return view('/admin/users/detail/order/{id}');
+    public function orderDetailUser ($id){
+        return view('Admin/orderDetailUser');
     }
 
 }
