@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Notre Site</a>
-    <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light headerNav">
+    <a class="navbar-brand" href="/">Craft Beers</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -9,8 +9,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('products')}}">Nos produits</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('contact')}}">Contact</a>
+            <li class="nav-item d-none d-lg-block">
+                <a class="nav-link" href="{{route('basket')}}">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+            <li class="nav-item d-lg-none">
+                <a class="nav-link" href="{{route('basket')}}">Mon panier</a>
             </li>
         </ul>
     </div>

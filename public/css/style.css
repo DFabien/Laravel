@@ -1,4 +1,28 @@
-.footerNav{
+.footerNav ul{
     margin: auto;
     text-align: center;
+}
+.headerNav{
+    background-image: url("../images/background.jpg");
+    background-size: cover ;
+    margin-bottom: 30px;
+}
+.footerNav{
+    background-image: url("../images/background.jpg");
+    background-size: cover ;
+}
+.navbar-brand{
+    color: white !important;
+    text-shadow: 5px 5px 10px black;
+    font-size: 25px;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: #eeb137 !important;
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255);
+    border-color: rgb(255, 255, 255);
 }
