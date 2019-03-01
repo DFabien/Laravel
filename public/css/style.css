@@ -44,7 +44,7 @@ body{
 }
 
 body{
-    background-color: #ffbb00;
+    background-color: #def7f7;
 }
 h1.titre-principal{
     text-align: center;
@@ -75,6 +75,17 @@ h2.titre-secondaire{
     padding-left: 4%;
 }
 
+.emballage .row{
+    padding: 20px;
+    margin: 20px;
+}
+.livraison h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.livraison h3{
+    margin-top: 15px;
+}
 
 
 /******************************************************************
