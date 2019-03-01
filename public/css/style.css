@@ -1,14 +1,48 @@
+/*HEAD*/
+
+html{
+    height: 100%;
+}
 
 /******************************************************************
     Header
 ******************************************************************/
+.headerNav{
+    background-image: url("../images/background.jpg");
+    background-size: cover ;
+    margin-bottom: 30px;
+}
 
+/************
+    Navbar
+************/
 
-
+.navbar-brand{
+    color: white !important;
+    text-shadow: 5px 5px 10px black;
+    font-size: 25px;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: #eeb137 !important;
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255);
+    border-color: rgb(255, 255, 255);
+}
 
 /******************************************************************
     Body Général
 ******************************************************************/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 body{
     background-color: #ffbb00;
 }
@@ -61,6 +95,15 @@ h2.titre-secondaire{
     footer
 ******************************************************************/
 .footerNav{
+}
+
+.footerNav ul{
     margin: auto;
     text-align: center;
+}
+
+.footerNav{
+    background-image: url("../images/background.jpg");
+    background-size: cover ;
+    margin-top: 30px;
 }

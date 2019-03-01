@@ -1,6 +1,6 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
+<nav class="navbar navbar-light bg-light footerNav">
 
-        <ul class="navbar-nav footerNav">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{route('products')}}">Nos produits</a>
             </li>
