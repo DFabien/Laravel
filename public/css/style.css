@@ -54,6 +54,8 @@ h1.titre-principal{
 }
 
 h2.titre-secondaire{
+    margin-top: 5%;
+    margin-bottom:3%;
     text-align: left;
     color: black;
 }
@@ -68,6 +70,7 @@ h2.titre-secondaire{
     Products
 ******************************************************************/
 .col-lg-8{
+    padding-top: 2%;
     padding-right: 15%;
 }
 
@@ -85,6 +88,12 @@ h2.titre-secondaire{
 }
 .livraison h3{
     margin-top: 15px;
+}
+
+.btn{
+    border-radius: 1px;
+    border-bottom-style: solid;
+    border-color: #ffd900;
 }
 
 
