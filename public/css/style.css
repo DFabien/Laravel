@@ -1,3 +1,12 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 .footerNav ul{
     margin: auto;
     text-align: center;
@@ -10,6 +19,7 @@
 .footerNav{
     background-image: url("../images/background.jpg");
     background-size: cover ;
+    margin-top: 30px;
 }
 .navbar-brand{
     color: white !important;

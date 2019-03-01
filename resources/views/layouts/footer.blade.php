@@ -1,4 +1,4 @@
-<nav class="navbar fixed-bottom navbar-light bg-light footerNav">
+<nav class="navbar navbar-light bg-light footerNav">
 
         <ul class="navbar-nav">
             <li class="nav-item">
