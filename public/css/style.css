@@ -44,7 +44,7 @@ body{
 }
 
 body{
-    background-color: #f1ffff;
+    background-color: #ffdc96;
 }
 h1.titre-principal{
     text-align: center;
@@ -64,6 +64,15 @@ h2.titre-secondaire{
     margin-left: 5%;
     color: #4b4b4b;
     font-size: 20px;
+}
+
+.btn-primary{
+    background-color: #483537;
+    border-color: #483537;
+}
+.btn-primary:hover{
+    background-color: #ba9018;
+    border-color: #ba9018;
 }
 
 /******************************************************************
@@ -118,7 +127,9 @@ hr{
     width: 70%;
 }
 
-
+.gender{
+    margin-bottom: 15px;
+}
 
 
 
