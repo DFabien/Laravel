@@ -49,10 +49,10 @@ class ProductController extends Controller
 
         $products=[$blonde,$blanche,$ambree, $rouge];
         
-        return view('products/product', ['liste'=>$products]);
+        return view('products.product', ['liste'=>$products]);
     }
     public function show($id){
 
-        return view('products/description');
+        return view('products.description');
     }
 }
