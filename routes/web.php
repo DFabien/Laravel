@@ -58,6 +58,8 @@ Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// 
 
 Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
+    // AdminCategoriesController
+
     Route::get('categories', 'AdminCategoriesController@showCatAll')->name('adminCategories');
 
     Route::get('categories/add', 'AdminCategoriesController@addCat')->name('adminCategoryAdd');
@@ -66,6 +68,8 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('categories/delete/{id}', 'AdminCategoriesController@deleteCat')->name('adminCategoryDelete');
 
+
+    // AdminProductsController
 
     Route::get('produits', 'AdminProductsController@showProdsAll')->name('adminProducts');
 
@@ -78,6 +82,8 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('produit/delete/{id}', 'AdminProductsController@deleteProd')->name('adminProductDelete');
 
 
+    // AdminDiscountController
+
     Route::get('discount', 'AdminDiscountController@showDiscAll')->name('adminDiscount');
 
     Route::get('discount/add', 'AdminDiscountController@addDiscount')->name('adminDiscountAdd');
@@ -86,6 +92,8 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
 
+
+    // AdminController
 
     Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
 
