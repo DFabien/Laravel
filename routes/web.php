@@ -57,31 +57,35 @@ Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// 
 //Admin Routes
 
 Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
-    Route::get('categories', 'AdminController@showCatAll')->name('adminCategories');
 
-    Route::get('categories/add', 'AdminController@addCat')->name('adminCategoryAdd');
+    Route::get('categories', 'AdminCategoriesController@showCatAll')->name('adminCategories');
 
-    Route::get('categories/edit/{id}', 'AdminController@updateCat')->name('adminCategoryEdit');
+    Route::get('categories/add', 'AdminCategoriesController@addCat')->name('adminCategoryAdd');
 
-    Route::get('categories/delete/{id}', 'AdminController@deleteCat')->name('adminCategoryDelete');
+    Route::get('categories/edit/{id}', 'AdminCategoriesController@updateCat')->name('adminCategoryEdit');
 
-    Route::get('produits', 'AdminController@showProdsAll')->name('adminProducts');
+    Route::get('categories/delete/{id}', 'AdminCategoriesController@deleteCat')->name('adminCategoryDelete');
 
-    Route::get('produit/add', 'AdminController@addProd')->name('adminProductAdd');
 
-    Route::get('produit/{id}', 'AdminController@showProd')->name('adminProduct');
+    Route::get('produits', 'AdminProductsController@showProdsAll')->name('adminProducts');
 
-    Route::get('produit/edit/{id}', 'AdminController@updateProd')->name('adminEdit');
+    Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
 
-    Route::get('produit/delete/{id}', 'AdminController@deleteProd')->name('adminProductDelete');
+    Route::get('produit/{id}', 'AdminProductsController@showProd')->name('adminProduct');
 
-    Route::get('discount', 'AdminController@showDiscAll')->name('adminDiscount');
+    Route::get('produit/edit/{id}', 'AdminProductsController@updateProd')->name('adminEdit');
 
-    Route::get('discount/add', 'AdminController@addDiscount')->name('adminDiscountAdd');
+    Route::get('produit/delete/{id}', 'AdminProductsController@deleteProd')->name('adminProductDelete');
 
-    Route::get('discount/edit', 'AdminController@updateDiscount')->name('adminDiscountEdit');
 
-    Route::get('discount/delete/{id}', 'AdminController@deleteDiscount')->name('adminDiscountDelete');
+    Route::get('discount', 'AdminDiscountController@showDiscAll')->name('adminDiscount');
+
+    Route::get('discount/add', 'AdminDiscountController@addDiscount')->name('adminDiscountAdd');
+
+    Route::get('discount/edit', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
+
+    Route::get('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+
 
     Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
 
