@@ -10,13 +10,21 @@ class ProductController extends Controller
 {
     public function showAll()
     {
-
         // $products = DB::select('select * from product');
 
-        $products = Product::All();
+        $products = Product::All()->sortBy('name');
 
         return view('products.product', ['liste'=>$products]);
     }
+
+    public function showAllByPrice()
+    {
+
+        $products = Product::All()->sortBy('price');
+
+        return view('products.product', ['liste'=>$products]);
+    }
+
     public function show($id){
 
        // $product = DB::select('select * from product where id = :id', ['id' => $id]);

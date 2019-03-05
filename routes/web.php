@@ -22,6 +22,8 @@ Route::get('/livraison', 'BasicController@delivery')->name('delivery'); // route
 // Products routes
 Route::get('/produits', 'ProductController@showAll' )->name('products'); // route vers la liste des produits
 
+Route::get('/produitsByPrice', 'ProductController@showAllByPrice' )->name('productsByPrice'); // route vers la liste des produits trié par prix
+
 Route::get('/produit/{id}','ProductController@show')->name('product'); //route vers un produit unique
 
 // Basket routes
