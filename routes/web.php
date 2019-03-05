@@ -22,7 +22,7 @@ Route::get('/livraison', 'BasicController@delivery')->name('delivery'); // route
 // Products routes
 Route::get('/produits', 'ProductController@showAll' )->name('products'); // route vers la liste des produits
 
-Route::get('/produit/{id}','ProductController@show')->name('produtct'); //route vers un produit unique
+Route::get('/produit/{id}','ProductController@show')->name('product'); //route vers un produit unique
 
 // Basket routes
 

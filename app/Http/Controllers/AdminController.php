@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function showCatAll(){
-        return view('Admin/category');
+        return view('Admin.category');
     }
 
     public function addCat(){

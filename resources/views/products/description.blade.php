@@ -5,9 +5,27 @@
 @endsection
 
 @section('content')
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus consequatur ducimus explicabo, fugit iusto
-        labore laborum maiores modi nesciunt obcaecati officiis quis quod sapiente similique sint tenetur unde vel?
-    </p>
-    @endsection
+    <h1 class="titre-principal">Detail produit</h1>
+
+    <div class="container-fluide">
+        <h2 class="titre-secondaire"></h2>
+
+
+                <div class="row">
+
+                    <div class="col-lg-8">{{$produit->nom}} </br>
+                        <p>{{$produit->price}}€</p>
+
+                        <p>{{$produit->description}}</p>
+
+                    </div>
+                </div>
+
+        </form>
+
+
+    </div>
+
+@endsection
+
 
