@@ -1,13 +1,15 @@
 @extends('layouts/layout')
 
 @section('title')
-    Ce Produit
+    Yoga
 @endsection
 
 @section('content')
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus consequatur ducimus explicabo, fugit iusto
-        labore laborum maiores modi nesciunt obcaecati officiis quis quod sapiente similique sint tenetur unde vel?
-    </p>
+        <div class="container-fluid">
+            <h2 class="titre-secondaire">Yoga</h2>
+            <p>{{$produit['0']->name}}</p></br>
+            <p>{{$produit['0']->price}}€<p></br>
+        </div>
+
     @endsection
 

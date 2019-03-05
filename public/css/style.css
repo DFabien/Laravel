@@ -8,7 +8,7 @@ html{
     Header
 ******************************************************************/
 .headerNav{
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/briques.jpg");
     background-size: cover ;
     margin-bottom: 30px;
 }
@@ -26,7 +26,8 @@ html{
     color: white !important;
 }
 .nav-link:hover{
-    color: #eeb137 !important;
+    color: #000000 !important;
+    border-bottom: #fff;
 }
 .navbar-dark .navbar-toggler {
     color: rgba(255,255,255);
@@ -44,7 +45,7 @@ body{
 }
 
 body{
-    background-color: #f1ffff;
+    background-color: #ffffff;
 }
 h1.titre-principal{
     text-align: center;
@@ -132,7 +133,7 @@ hr{
 }
 
 .footerNav{
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/briques.jpg");
     background-size: cover ;
     margin-top: 30px;
 }

@@ -12,10 +12,10 @@ Contact
         <div class="container">
             <div class="row">
                     <div class="col">
-                        <p>Craft Beers</p>
+                        <p>Yoga & co</p>
                         <p> 7 Rue Hoche 38000 Grenoble</p>
                         <p>09 55 98 99 77</p>
-                        <p>Craft-Beers@contact.fr</p>
+                        <p>yoga&co@contact.fr</p>
 
 
 
