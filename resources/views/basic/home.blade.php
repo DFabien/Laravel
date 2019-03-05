@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 
 @section('title')
-Accueil
+Accueil seb
 @endsection
 
 @section('content')
