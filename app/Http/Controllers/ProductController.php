@@ -12,9 +12,13 @@ class ProductController extends Controller
     {
         // $products = DB::select('select * from product');
 
-        $products = Product::All()->sortBy('name');
+        if(isset($_GET['sort'])){
+            $products = Product::All()->sortBy('price');
+        } else {
+            $products = Product::All()->sortBy('name');
+        }
 
-        return view('products.product', ['liste'=>$products]);
+        return view('products.product', ['liste' => $products]);
     }
 
     public function showAllByPrice()
@@ -22,15 +26,20 @@ class ProductController extends Controller
 
         $products = Product::All()->sortBy('price');
 
-        return view('products.product', ['liste'=>$products]);
+        return view('products.product', ['liste' => $products]);
     }
 
-    public function show($id){
+    public function show($id)
+    {
 
-       // $product = DB::select('select * from product where id = :id', ['id' => $id]);
+        // $product = DB::select('select * from product where id = :id', ['id' => $id]);
 
         $product = Product::find($id);
 
-        return view('products.description' , ['product' => $product]);
+        return view('products.description', ['product' => $product]);
     }
 }
+
+
+
+

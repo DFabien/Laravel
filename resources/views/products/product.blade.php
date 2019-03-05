@@ -7,6 +7,10 @@
 @section('content')
     <div class="container">
         <h1 class="titre-principal">Nos produits</h1>
+        <div>
+            <a href="{{ route('products') }}">Tri par nom</a>
+            <a href="{{ route('products', ['sort']) }}">Tri par prix</a>
+        </div>
 
         @foreach($liste as $product)
             <p>{{ $product->name }}</p>
