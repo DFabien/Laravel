@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function showAll()
     {
-        $produit = Products::all()->sortBy('name');
+        $produit = Products::orderBy('price')->get();
         //dd($produit);
         return view ('products/product',['liste'=>$produit]);
     }
