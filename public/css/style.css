@@ -114,11 +114,13 @@ img.posture{
     padding-top: 3%;
     padding-left: 5%;
     text-align: right;
+    margin-bottom: 3%;
 }
 
 img.poids{
     padding-top:5%;
     width: 82%;
+    margin-bottom: 3%;
 }
 /******************************************************************
     Products
@@ -135,6 +137,10 @@ img.poids{
 
 .col-lg-6{
     vertical-align: middle;
+}
+
+.produit{
+    margin-bottom: 5%;
 }
 
 .emballage .row{
@@ -174,6 +180,7 @@ img.poids{
 
 .desc{
     margin: auto;
+    padding-right:15%;
 }
 
 /******************************************************************
