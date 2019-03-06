@@ -114,6 +114,7 @@ h3{
     border: 2px;
     border-style: solid;
     border-color: #098e92;
+    margin-bottom: 0;
 }
 
 .images{
@@ -145,18 +146,69 @@ h3{
 /******************************************************************
     Contact
 ******************************************************************/
-
-
 iframe{
-    width: 100%;
+    width: 85%;
     height: 100%;
 }
 
-hr{
-    width: 70%;
+.container{
+    text-align: center;
+    width: 55%;
 }
 
+.col{
+    text-align: center;
+}
 
+.contact .form-civilite input{
+    width: 25px;
+    margin: 0;
+    vertical-align: middle;
+    color:#fff;
+}
+
+.contact .form-civilite label{
+    display: inline-block;
+    margin-right: 2%;
+    line-height: 2.5;
+}
+
+.contact .form-civilite{
+    margin-bottom: 3%;
+}
+
+.motif select{
+    width: 100%;
+}
+
+.formul-email input{
+    width: 100%;
+}
+
+.formul-message textarea{
+    width: 100%;
+    height: 150px;
+}
+
+hr.haut{
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #098e92;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+hr.bas{
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #098e92;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+    margin-top:0;
+}
 
 
 
