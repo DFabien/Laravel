@@ -38,6 +38,7 @@ class ProductController extends Controller
 
         return view('products.description', ['product' => $product]);
     }
+
 }
 
 

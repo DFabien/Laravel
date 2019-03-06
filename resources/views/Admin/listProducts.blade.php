@@ -1,11 +1,29 @@
-@extends('layouts/layout')
+@extends('layouts/admin/layout')
 
 @section('title')
-    listPdt
+    Liste produits
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores doloribus ex facilis fugiat, ipsa
-        itaque iure magni mollitia voluptate. Atque doloribus ea ipsum non provident quisquam ratione totam veniam!
-    </p>
+    <div class="container">
+        <p><a href="{{ route('adminProductAdd') }}" class="button">➕ Ajouter un produit</a></p>
+        <table class="table">
+            <tr>
+                <th>Nom</th>
+                <th>id</th>
+                <th>stock</th>
+                <th>actions</th>
+            </tr>
+            @foreach($products as $product)
+                <tr>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->stock }}</td>
+                </tr>
+            @endforeach
+
+        </table>
+
+
+    </div>
 @endsection

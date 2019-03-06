@@ -17,15 +17,15 @@ html{
     Navbar
 ************/
 
-.navbar-brand{
+.headerNav .navbar-brand{
     color: white !important;
     text-shadow: 5px 5px 10px black;
     font-size: 25px;
 }
-.nav-link{
+.headerNav .nav-link{
     color: white !important;
 }
-.nav-link:hover{
+.headerNav .nav-link:hover{
     color: #eeb137 !important;
 }
 .navbar-dark .navbar-toggler {
@@ -36,7 +36,7 @@ html{
 /******************************************************************
     Body Général
 ******************************************************************/
-body{
+.front{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,7 +44,7 @@ body{
 }
 
 body{
-    background-color: #ffdc96;
+    background-color: #ffffff;
 }
 h1.titre-principal{
     text-align: center;
@@ -146,4 +146,26 @@ hr{
     background-image: url("../images/background.jpg");
     background-size: cover ;
     margin-top: 30px;
+}
+
+
+/******************************************************************
+    admin
+******************************************************************/
+.adminNav .nav-link{
+    color: black !important;
+}
+.adminNav {
+    margin-bottom: 20px;
+}
+.button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: #f2f2f2;
 }

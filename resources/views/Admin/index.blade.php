@@ -1,7 +1,7 @@
 @extends('layouts/admin/layout')
 
 @section('title')
-    addCat
+    Administration
 @endsection
 
 @section('content')

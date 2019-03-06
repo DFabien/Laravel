@@ -12,4 +12,8 @@ class Product extends Model
      * @var string
      */
     protected $table = 'product';
+    public $timestamps = false;
+    protected $fillable = ['name', 'descr', 'price', 'weight', 'stock', 'id_category'];
+
 }
+
