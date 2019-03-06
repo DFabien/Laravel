@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light headerNav">
+    
     <a class="navbar-brand" href="/">Yoga & Co</a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,4 +20,5 @@
             </li>
         </ul>
     </div>
+
 </nav>
