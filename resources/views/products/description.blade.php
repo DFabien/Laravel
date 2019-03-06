@@ -13,7 +13,7 @@
 
                 <div class="row">
 
-                    <div class="col-lg-8">{{$produit->nom}} </br>
+                    <div class="col-lg-8">{{$produit->name}} </br>
                         <p>{{$produit->price}}€</p>
 
                         <p>{{$produit->description}}</p>

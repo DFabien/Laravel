@@ -13,11 +13,11 @@
             @foreach ($liste as $produit)
                 <div class="row">
 
-                    <div class="col-lg-8">{{$produit->nom}} </br>
+                    <div class="col-lg-8">{{$produit->name}} </br>
                         <p>{{$produit->price}}€</p>
 
 
-                            <a href="{{ route('product', ['id'=>$produit->id_products] ) }}"> voir la description </a>
+                            <a href="{{ route('product', ['id'=>$produit->id] ) }}"> voir la description </a>
                     </div>
                 </div>
             @endforeach
