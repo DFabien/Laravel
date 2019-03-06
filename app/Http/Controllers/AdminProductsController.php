@@ -20,31 +20,31 @@ class AdminProductsController extends Controller
     }
 
     public function addProd(){
-        return view('Admin.addProduct');
+        $product = new Product();
+        return view('Admin.addUpdateProduct', ['product' => $product]);
     }
 
-    public function updateProd(){
-        return view('Admin.updateProduct');
+    public function updateProd($id){
+        $product = Product::find($id);
+
+        return view('Admin.addUpdateProduct', ['product' => $product]);
     }
 
-    public function deleteProd(){
-        return view('Admin.showProduct');
+    public function deleteProd($id){
+        $product = Product::find($id);
+
+        return view('Admin.deleteProduct', ['product' => $product]);
+    }
+    public function destroyProd($id){
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect(route('adminProducts'));
     }
 
     public function storeProd(Request $request){
 
-        Product::create($request->all()); // cree une instance de product et la sauve en base, request->all passe en tableau les données recus
-
-        /*
-        $product->name = $request->name;
-        $product->descr = $request->descr;
-        $product->price = $request->price;
-        $product->weight = $request->weight;
-        $product->stock = $request->stock;
-        $product->id_category = $request->id_category;
-
-        $product->save();
-        */
+        Product::updateOrCreate( ['id' => $request->id], $request->all());
 
         return redirect(route('adminProducts'));
     }
