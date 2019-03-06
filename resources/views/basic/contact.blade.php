@@ -32,13 +32,11 @@ Contact
     <div class="container">
     <form action="#" method="post">
             <div class="form-civilite">
-                <input id="gender-monsieur" type="radio" name="civilite" value="monsieur" checked>
-                <label for="gender-monsieur">Monsieur</label>
-                <input id="gender-madame" type="radio" name="civilite" value="madame">
+                <input id="gender-madame" type="radio" name="civilite" value="madame" checked>
                 <label for="gender-madame">Madame</label>
-                <input id="gender-mademoiselle" type="radio" name="civilite" value="mademoiselle">
-                <label for="gender-mademoiselle">Mademoiselle</label>
-    </div>
+                <input id="gender-monsieur" type="radio" name="civilite" value="monsieur">
+                <label for="gender-monsieur">Monsieur</label>
+            </div>
 
     <div class="form-group">
         <label for="name">Nom - Prénom</label><br>

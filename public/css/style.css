@@ -50,15 +50,20 @@ body{
 body{
     background-color: #ffffff;
 }
-h1.titre-principal{
+
+.titre-principal{
     text-align: center;
     color: #098e92;
     margin-top: 3%;
     margin-bottom: 5%;
-   
+}
+.home .titre-principal{
+    text-align: center;
+    color: #098e92;
+    margin-top: 3%;
+    margin-bottom: 1%;
 
 }
-
 h2.titre-secondaire{
     margin-top: 5%;
     margin-bottom:3%;
@@ -79,11 +84,46 @@ h3{
 }
 
 /******************************************************************
+    Home
+******************************************************************/
+img.posture{
+    width: 55%;
+}
+
+.home{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align:center;
+}
+
+.yoga{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.info{
+    padding-top: auto;
+}
+
+.separation{
+    width: 60%;
+    border-color: #098e92;
+}
+
+.text{
+    padding-top: 3%;
+    padding-left: 5%;
+    text-align: right;
+}
+
+img.poids{
+    padding-top:5%;
+    width: 82%;
+}
+/******************************************************************
     Products
 ******************************************************************/
-.row{
-    margin-bottom: 5%;
-}
+
 .col-lg-8{
     padding-top: 6%;
     padding-right: 15%;
