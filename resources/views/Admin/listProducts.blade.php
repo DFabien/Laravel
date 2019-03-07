@@ -14,7 +14,8 @@
         <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
     </div>
     <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
-        <p>{{$produit->price}}€</p><br>     
+        <p>{{$produit->price}}€</p><br>  
+        <input type="submit" name="edition" value="Modifier" class="btn">   
     </div> 
 </div>
 @endforeach
