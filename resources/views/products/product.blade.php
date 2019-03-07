@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong></br>
                 <p>{{$produit->price}}€</p></br>
-                <a class="btn" href="{{route('description', ['id'=>$produit->id_article])}}" > En savoir plus  </a>          
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
             </div> 
         </div>
         @endforeach
