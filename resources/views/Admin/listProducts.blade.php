@@ -6,7 +6,7 @@
 
 @section('content')
     
-<a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>    
+<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>   </h1>
 
 @foreach ($liste as $produit)
 <div class="row">
@@ -18,5 +18,6 @@
     </div> 
 </div>
 @endforeach
+<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>   </h1>
 
 @endsection

@@ -46,7 +46,7 @@
                 </div>
     
                 <div class="form-group">
-                        <input type="submit" name="ajout" class="btn">
+                        <input type="submit" name="ajout" value="Ajouter" class="btn">
                     </div>
         </form>
         </div>
