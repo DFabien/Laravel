@@ -21,6 +21,10 @@ Route::get('/livraison', 'BasicController@delivery')->name('delivery'); // route
 
 // Products routes
 Route::get('/produits', 'ProductController@showAll' )->name('products'); // route vers la liste des produits
+Route::get('/produits', 'ProductController@showAll1' )->name('products'); // route vers la liste des produits
+Route::get('/produits', 'ProductController@showAll2' )->name('products'); // route vers la liste des produits
+Route::get('/produits', 'ProductController@showAll3' )->name('products'); // route vers la liste des produits
+Route::get('/produits', 'ProductController@showAll4' )->name('products'); // route vers la liste des produits
 
 Route::get('/produit/{id}','ProductController@show')->name('description'); //route vers un produit unique
 
@@ -68,6 +72,7 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('produits', 'AdminController@showProdsAll')->name('adminProducts');
 
     Route::get('produit/add', 'AdminController@addProd')->name('adminProductAdd');
+    Route::put('produit/add', 'AdminController@addProd2')->name('adminPdtAdd');
 
     Route::get('produit/{id}', 'AdminController@showProd')->name('adminProduct');
 

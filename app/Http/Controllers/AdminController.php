@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products_Model;
 
 class AdminController extends Controller
 {
@@ -24,7 +25,9 @@ class AdminController extends Controller
 
 
     public function showProdsAll(){
-        return view('Admin/listProducts');
+        $produits = Products_Model::all();
+
+        return view('Admin/listProducts',['liste'=>$produits]); //listProducts = nom de la vue
     }
 
     public function showProd($id){
@@ -33,6 +36,19 @@ class AdminController extends Controller
 
     public function addProd(){
         return view('Admin/addProduct');
+    }
+
+    public function addProd2(request $request){
+        $ajout = new Products_Model;
+        $ajout -> name = $request -> name;
+        $ajout -> description = $request -> description;
+        $ajout -> photo = $request -> photo;
+        $ajout -> price = $request -> prix;
+        $ajout -> weight = $request -> poids;
+        $ajout -> stock = $request -> stock;
+        $ajout -> id_cat = $request -> categorie;  //id_cat nom de la bdd, categorie nom du name formulaire
+        $ajout -> save(); //pour sauvegarder les ajouts
+        return redirect('admin/produits'); //retourne sur l'url
     }
 
     public function updateProd(){

@@ -16,8 +16,60 @@
             <div class="col-lg-4 produit">
                 <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
             </div>
-            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong></br>
-                <p>{{$produit->price}}€</p></br>
+            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+                <p>{{$produit->price}}€</p><br>
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
+            </div> 
+        </div>
+        @endforeach
+
+        <h2 class="titre-secondaire">Fitness & Training</h2>
+        @foreach ($liste as $produit)
+        <div class="row">
+            <div class="col-lg-4 produit">
+                <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+            </div>
+            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+                <p>{{$produit->price}}€</p><br>
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
+            </div> 
+        </div>
+        @endforeach
+
+        <h2 class="titre-secondaire">Danse</h2>
+        @foreach ($liste as $produit)
+        <div class="row">
+            <div class="col-lg-4 produit">
+                <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+            </div>
+            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+                <p>{{$produit->price}}€</p><br>
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
+            </div> 
+        </div>
+        @endforeach
+
+        <h2 class="titre-secondaire">Crossfit</h2>
+        @foreach ($liste as $produit)
+        <div class="row">
+            <div class="col-lg-4 produit">
+                <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+            </div>
+            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+                <p>{{$produit->price}}€</p><br>
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
+            </div> 
+        </div>
+        @endforeach
+
+        <h2 class="titre-secondaire">Lifestyle</h2>
+        @foreach ($liste as $produit)
+        <div class="row">
+            <div class="col-lg-4 produit">
+                <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+            </div>
+            <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+                <p>{{$produit->price}}€</p><br>
                 <a class="btn" href="{{route('description', ['id'=>$produit->id])}}" > En savoir plus  </a>          
             </div> 
         </div>

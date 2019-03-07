@@ -5,7 +5,18 @@
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores doloribus ex facilis fugiat, ipsa
-        itaque iure magni mollitia voluptate. Atque doloribus ea ipsum non provident quisquam ratione totam veniam!
-    </p>
+    
+<a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>    
+
+@foreach ($liste as $produit)
+<div class="row">
+    <div class="col-lg-4 produit">
+        <img class="images" src="{{ asset("/images/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+    </div>
+    <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
+        <p>{{$produit->price}}€</p><br>     
+    </div> 
+</div>
+@endforeach
+
 @endsection
