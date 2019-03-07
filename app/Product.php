@@ -25,6 +25,13 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereStock($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereWeight($value)
  * @mixin \Eloquent
+ * @property string $description
+ * @property string|null $image
+ * @property int $category_id
+ * @property-read \App\Category $category
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereImage($value)
  */
 class Product extends Model
 {
@@ -34,7 +41,7 @@ class Product extends Model
      * @var string
      */
     public $timestamps = false;
-    protected $fillable = ['name', 'descr', 'price', 'weight', 'stock', 'id_category'];
+    protected $fillable = ['name', 'description', 'price', 'image', 'stock', 'category_id'];
 
     public function category()
     {

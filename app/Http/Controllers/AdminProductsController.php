@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
 
 class AdminProductsController extends Controller
 {
@@ -21,13 +22,14 @@ class AdminProductsController extends Controller
 
     public function addProd(){
         $product = new Product();
-        return view('Admin.addUpdateProduct', ['product' => $product]);
+        $categories = Category::All();
+        return view('Admin.addUpdateProduct', ['product' => $product, 'categories' => $categories]);
     }
 
     public function updateProd($id){
         $product = Product::find($id);
-
-        return view('Admin.addUpdateProduct', ['product' => $product]);
+        $categories = Category::All();
+        return view('Admin.addUpdateProduct', ['product' => $product, 'categories' => $categories]);
     }
 
     public function deleteProd($id){
