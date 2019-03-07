@@ -109,6 +109,12 @@ h2.titre-secondaire {
 .livraison h3 {
     margin-top: 15px;
 }
+.productList img{
+    width: 150px;
+}
+.sort {
+   margin-bottom: 60px;
+}
 
 /******************************************************************
     Basket

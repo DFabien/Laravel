@@ -7,16 +7,21 @@
 @section('content')
     <div class="container">
         <h1 class="titre-principal">Nos produits</h1>
-        <div>
-            <a href="{{ route('products') }}">Tri par nom</a>
-            <a href="{{ route('products', ['sort']) }}">Tri par prix</a>
+        <div class="sort">
+            <a href="{{ route('products') }}" class="ico-button ico-button-blue">Tri par nom</a>
+            <a href="{{ route('products', ['sort']) }}" class="ico-button ico-button-blue">Tri par prix</a>
+        </div>
+        <div class="row">
+            @foreach($liste as $product)
+                <div class="col-4 productList">
+                    <img src="{{ $product->image }}" alt="{{ $product->name }}">
+                    <p>{{ $product->name }}</p>
+                    <p>{{ $product->price / 100 }} €</p>
+                    <p><a href="{{route('product', ['id' => $product->id ])}}">Detail</a></p>
+                </div>
+            @endforeach
         </div>
 
-        @foreach($liste as $product)
-            <p>{{ $product->name }}</p>
-            <p>{{ $product->price / 100 }} €</p>
-            <p><a href="{{route('product', ['id' => $product->id ])}}">Detail</a></p>
-        @endforeach
 
     </div>
 
