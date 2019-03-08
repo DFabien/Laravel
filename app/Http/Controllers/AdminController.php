@@ -38,26 +38,26 @@ class AdminController extends Controller
         return view('Admin/addProduct');
     }
 
-//    public function updateProd($id){
-//
-//        $article = Products::find($id);
-//
-//        return view('Admin.updateProduct', [ 'article' => $article ] );
-//    }
+    public function updateProd($id){
 
-//    public function edit_store(request $request, $id){
-//        $article = Products::find($id);
-//        $article ->name= $request->nom;
-//        $article ->description= $request->description;
-//        $article ->price= $request->prix;
-//        $article ->weight= $request->weight;
-//        $article ->stock_quantity= $request->stock_quantity;
-//        $article ->category= $request->category;
-//        $article -> save();
-//
-//        return redirect('admin/produits');
-//
-//    }
+        $article = Products::find($id);
+
+        return view('Admin.updateProduct', [ 'article' => $article ] );
+    }
+
+    public function edit_store(request $request, $id){
+        $article = Products::find($id);
+        $article ->name= $request->nom;
+        $article ->description= $request->description;
+        $article ->price= $request->prix;
+        $article ->weight= $request->weight;
+        $article ->stock_quantity= $request->stock_quantity;
+        $article ->category= $request->category;
+        $article -> save();
+
+        return redirect('admin/produits');
+
+    }
 
     public function deleteProd(){
         return view('Admin/showProduct');
