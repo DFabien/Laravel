@@ -36,9 +36,11 @@ Route::prefix('panier')->group(function () {
 
     Route::get('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
 
+    Route::get('validation', 'BasketController@validation')->name('basketValidation'); // route vers
+
     Route::get('{codePromo}', 'BasketController@discount')->name('basketDiscount'); // route vers
 
-    Route::get('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
+    Route::post('ajout', 'BasketController@add')->name('basketAdd'); // route vers
 });
 
 // User routes

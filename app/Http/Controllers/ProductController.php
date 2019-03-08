@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\Product;
 
 class ProductController extends Controller
 {
     public function showAll()
     {
-        // $products = DB::select('select * from product');
-
         if(isset($_GET['sort'])){
             $products = Product::All()->sortBy('price');
         } else {
@@ -29,14 +26,17 @@ class ProductController extends Controller
         return view('products.product', ['liste' => $products]);
     }
 
-    public function show($id)
+    public function show(request $request, $id)
     {
-
-        // $product = DB::select('select * from product where id = :id', ['id' => $id]);
-
+        if ($request->session()->has('order.' . $id)) {
+            $order = $request->session()->get('order.' . $id );
+            $value = $order['quantity'];
+        }else {
+            $value = 1;
+        }
         $product = Product::find($id);
 
-        return view('products.description', ['product' => $product]);
+        return view('products.description', ['product' => $product, 'value' => $value]);
     }
 
 }

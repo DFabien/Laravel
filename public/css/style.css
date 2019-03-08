@@ -83,6 +83,12 @@ h2.titre-secondaire {
 .center {
     text-align: center;
 }
+.right{
+    text-align: right;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
 
 /******************************************************************
     Products
@@ -119,6 +125,14 @@ h2.titre-secondaire {
 /******************************************************************
     Basket
 ******************************************************************/
+
+.basketList img{
+    width: 50px;
+}
+.basketList td{
+    vertical-align: middle;
+}
+
 
 /******************************************************************
     Contact
