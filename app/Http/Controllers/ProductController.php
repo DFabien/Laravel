@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function showAll()
     {
-       $produits = TheProducts::all()->sortBy("nom");
+       $produits = TheProducts::all()->sortBy("price");
             return view('products.product',['products' =>$produits]);
     }
     public function show($id){
