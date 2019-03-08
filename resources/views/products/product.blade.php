@@ -9,18 +9,18 @@
 
     <div class="container-fluide">
         <h2 class="titre-secondaire"></h2>
-
+        <div class="row">
             @foreach ($liste as $produit)
-                <div class="row">
-
-                    <div class="col-lg-8">{{$produit->name}} </br>
-                        <p>{{$produit->price}}€</p>
 
 
-                            <a href="{{ route('product', ['id'=>$produit->id] ) }}"> voir la description </a>
-                    </div>
+                <div class="col-lg-12"><p>{{$produit->name}}
+                        {{$produit->price}}€
+
+
+                        <a href="{{ route('product', ['id'=>$produit->id] ) }}"> voir la description </a></p>
                 </div>
             @endforeach
+        </div>
 
     </div>
 
