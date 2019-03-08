@@ -75,6 +75,9 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
 
+
+    Route::put('produit_store', 'AdminProductsController@store')->name('addPdts');
+
     Route::get('produit/{id}', 'AdminProductsController@showProd')->name('adminProduct');
 
     Route::get('produit/edit/{id}', 'AdminProductsController@updateProd')->name('adminEdit');
