@@ -6,7 +6,7 @@
 
 @section('content')
     
-<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>   </h1>
+<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a></h1>
 
 @foreach ($liste as $produit)
 <div class="row">
@@ -15,10 +15,11 @@
     </div>
     <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
         <p>{{$produit->price}}€</p><br>  
-        <input type="submit" name="edition" value="Modifier" class="btn">   
+        <h1 class="titre-principal"><a class="btn" href="{{route('adminEdit', $produit->id)}}">Modifier</a></h1>
+    
     </div> 
 </div>
 @endforeach
-<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a>   </h1>
+<h1 class="titre-principal"><a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a></h1>
 
 @endsection

@@ -27,22 +27,22 @@
     
         <div class="form-group">
             <label for="mail">Prix</label><br>
-            <input  id="mail" type="number" name="prix"  class="form-control">
+            <input  id="mail" min=0 type="number" name="prix"  class="form-control">
         </div>
 
         <div class="form-group">
                 <label for="mail">Poids</label><br>
-                <input  id="mail" type="number" name="poids"  class="form-control">
+                <input  id="mail" min=0 type="number" name="poids"  class="form-control">
             </div>
 
             <div class="form-group">
                     <label for="mail">Stock</label><br>
-                    <input  id="mail" type="number" name="stock"  class="form-control">
+                    <input  id="mail" min=0 type="number" name="stock"  class="form-control">
                 </div>
 
             <div class="form-group">
                     <label for="mail">Id Catégorie</label><br>
-                    <input  id="mail" type="number" name="categorie"  class="form-control">
+                    <input  id="mail" min=1 max=5 type="number" name="categorie"  class="form-control">
                 </div>
     
                 <div class="form-group">

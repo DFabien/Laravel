@@ -51,8 +51,23 @@ class AdminController extends Controller
         return redirect('admin/produits'); //retourne sur l'url
     }
 
-    public function updateProd(){
-        return view('Admin/updateProduct');
+    public function updateProduct(request $request, $id){
+        $article = Products_Model::find($id);
+
+        return view('Admin/updateProduct', ['modifier'=>$article]);
+    }
+
+    public function updateProduct2(request $request, $id){
+        $modif = Products_Model::find($id);
+        $modif -> name = $request -> name;
+        $modif -> description = $request -> description;
+        $modif -> photo = $request -> photo;
+        $modif -> price = $request -> prix;
+        $modif -> weight = $request -> poids;
+        $modif -> stock = $request -> stock;
+        $modif -> id_cat = $request -> categorie;
+        $modif -> save();
+        return redirect('admin/produits');
     }
 
     public function deleteProd(){
