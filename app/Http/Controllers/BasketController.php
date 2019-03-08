@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products_Model;
 
 class BasketController extends Controller
 {
     public function show(){
+        
         return view('basket/basket');
     }
 
@@ -23,7 +25,9 @@ class BasketController extends Controller
     }
 
     public function add($id){
-        return view('products/description');
+        $panier= Products_Model::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
+
+        return view('basket/basket', ['produit'=>$panier]);
     }
 
 }

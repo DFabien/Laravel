@@ -16,7 +16,7 @@
                 <h3>{{$produit->name}}</h3><br>
                 <p>{{$produit->description}}</p><br>
                 <p>{{$produit->price}}€</p><br>
-                <a class="btn" href="{{route('basket')}}" > Ajouter au panier  </a>
+                <a class="btn" href="{{route('basketAdd', $produit->id)}}" > Ajouter au panier  </a>
             </div>
         </div>
     </div>
