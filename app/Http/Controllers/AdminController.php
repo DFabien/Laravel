@@ -59,8 +59,12 @@ class AdminController extends Controller
 
     }
 
-    public function deleteProd(){
-        return view('Admin/showProduct');
+    public function deleteProd($id){
+
+        $article= Products::find($id);
+        $article->delete();
+
+        return redirect('admin/produits');
 
     }
 
