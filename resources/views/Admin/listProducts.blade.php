@@ -15,7 +15,8 @@
     </div>
     <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
         <p>{{$produit->price}}€</p><br>  
-        <h1 class="titre-principal"><a class="btn" href="{{route('adminEdit', $produit->id)}}">Modifier</a></h1>
+        <h1 class="titre-principal"><a class="btn" href="{{route('adminEdit', $produit->id)}}">Modifier</a>
+        <a class="btn" href="{{route('adminProductDelete', $produit->id)}}">Supprimer</a></h1>
     
     </div> 
 </div>
