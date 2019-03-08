@@ -14,10 +14,9 @@ class ProductController extends Controller
             return view('products.product',['products' =>$produits]);
     }
     public function show($id){
-        $produits = DB::select("select nom,description,price from products WHERE id_products = $id");
-        // double cote accepte variables php mais pas simple cote
+        $produits = TheProducts::find($id);
 
-        return view('products.description',['products' =>$produits[0]]);
+        return view('products.description',['products' =>$produits]);
     }
 }
 
