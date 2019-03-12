@@ -12,9 +12,6 @@ class BasketController extends Controller
     public function show(Request $request)
     {
 
-        //$request->session()->flush();
-
-       // var_dump($request->session()->all());
         $articles = [];
         $total = 0;
         if ($request->session()->has('order')) {

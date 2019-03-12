@@ -14,10 +14,18 @@
         <div class="row">
             @foreach($liste as $product)
                 <div class="col-4 productList">
-                    <img src="{{ $product->image }}" alt="{{ $product->name }}">
-                    <p>{{ $product->name }}</p>
-                    <p>{{ $product->price / 100 }} €</p>
-                    <p><a href="{{route('product', ['id' => $product->id ])}}">Detail</a></p>
+                    <div class="row">
+                        <div class="col">
+                            <img src="{{ $product->image }}" alt="{{ $product->name }}">
+                        </div>
+                        <div class="col">
+                            <h4>{{ $product->name }}</h4>
+                            <h5>{{ $product->price / 100 }} €</h5>
+                            <p><a href="{{route('product', ['id' => $product->id ])}}" class="ico-button ico-button-green">Detail</a></p>
+                        </div>
+                    </div>
+
+
                 </div>
             @endforeach
         </div>

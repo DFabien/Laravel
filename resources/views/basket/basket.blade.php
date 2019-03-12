@@ -19,8 +19,8 @@ PANIER
         </tr>
         @foreach($articles as $article)
             <tr>
-                <td><img src="{{ $article['product']->image }}" alt="{{  $article['product']->name }}"></td>
-                <td>{{ $article['product']->name }}</td>
+                <td><a href="{{route('product', ['id' =>$article['product']->id ])}}"><img src="{{ $article['product']->image }}" alt="{{  $article['product']->name }}"></a></td>
+                <td><a href="{{route('product', ['id' =>$article['product']->id ])}}" class="basketLink">{{ $article['product']->name }}</a></td>
                 <td class="center">{{ $article['product']->price /100 }} €</td>
                 <td class="center">{{ $article['quantity'] }}</td>
                 <td class="center">{{ ($article['product']->price /100) * $article['quantity'] }} €</td>

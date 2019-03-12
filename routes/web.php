@@ -116,5 +116,9 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('user/order/{id}', 'AdminController@orderUser')->name('adminUser');
 
     Route::get('user/detail/order/{id}', 'AdminController@orderDetUser')->name('adminOrderUser');
+
+    //  AdminProductController
+
+    Route::resource('order', 'AdminOrderController');
 });
 
