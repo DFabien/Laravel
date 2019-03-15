@@ -46,6 +46,7 @@ class AdminController extends Controller
     }
 
     public function edit_store(request $request, $id){
+
         $article = Products::find($id);
         $article ->name= $request->nom;
         $article ->description= $request->description;

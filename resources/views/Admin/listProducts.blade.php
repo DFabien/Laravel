@@ -23,7 +23,7 @@
                     <p><a href="{{ route('adminEdit', ['id'=>$produit->id]) }}">
                             <button>Editer</button>
 
-                            <a href="{{ route('adminProductDelete')}}">
+                            <a href="{{route('adminProductDelete',['id'=>$produit->id])}}">
                                 <button>Supprimer</button>
                             </a>
                         </a></p>
