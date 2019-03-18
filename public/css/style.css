@@ -8,30 +8,34 @@ html{
     Header
 ******************************************************************/
 .headerNav{
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
+    margin-bottom: 30px;
 }
 .headerNav img{
-    width: 50px;
+    height: 50px;
 }
 
 /************
     Navbar
 ************/
-
+.headerNav
 .navbar-brand{
     color: white !important;
     text-shadow: 5px 5px 10px black;
     font-size: 25px;
 }
+.headerNav
 .nav-link{
     color: white !important;
     padding-bottom: 1%;
 }
+.headerNav
 .nav-link:hover{
-    color: #a5d5ec !important;
+    color: #F38A1E !important;
     transition: all linear 200ms;
 }
+.headerNav
 .navbar-dark .navbar-toggler {
     color: rgba(255,255,255);
     border-color: rgb(255, 255, 255);
