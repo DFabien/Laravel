@@ -20,7 +20,7 @@
     <div>
         @include('layouts/header')
     </div>
-    <div>
+    <div class="middleDiv">
         @yield('content')
     </div>
     <div>
