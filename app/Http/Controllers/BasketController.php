@@ -13,15 +13,15 @@ class BasketController extends Controller
     }
 
     public function update(){
-        return view('basket/basket');
+        return view('basket.basket');
     }
 
     public function delete($id){
-        return view('basket/basket');
+        return view('basket.basket');
     }
 
     public function discount($codePromo){
-        return view('basket/basket');
+        return view('basket.basket');
     }
 
     public function add($id){

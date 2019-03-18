@@ -83,6 +83,15 @@ h3{
     font-size: 20px;
 }
 
+.btn-primary{
+    background-color: #483537;
+    border-color: #483537;
+}
+.btn-primary:hover{
+    background-color: #ba9018;
+    border-color: #ba9018;
+}
+
 /******************************************************************
     Home
 ******************************************************************/
@@ -232,6 +241,7 @@ iframe{
     width: 100%;
 }
 
+HEAD
 .formul-message textarea{
     width: 100%;
     height: 150px;
@@ -246,6 +256,7 @@ hr.haut{
     border-radius: 20px;
     margin-bottom: 0;
 }
+
 
 hr.bas{
     overflow: visible; /* For IE */
@@ -282,4 +293,3 @@ hr.bas{
     margin: auto;
     text-align: center;
 }
-
