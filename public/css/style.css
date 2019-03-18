@@ -288,7 +288,7 @@ hr.bas{
     footer
 ******************************************************************/
 .footerNav{
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     margin-top: 30px;
 }
@@ -296,4 +296,10 @@ hr.bas{
 .footerNav ul{
     margin: auto;
     text-align: center;
+}
+.footerNav .nav-link{
+    color : white !important;
+}
+.footerNav .nav-link:hover{
+    color : #F38A1E !important;
 }
