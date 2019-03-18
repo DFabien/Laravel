@@ -16,33 +16,33 @@
             <input type="text" id="name" name="name" class="form-control">
         </div>
         <div class="form-group">
-            <label for="telephone">Description</label><br>
-            <input  id="telephone" type="text" name="description"  class="form-control">
+            <label for="desc">Description</label><br>
+            <input  id="decription" type="text" name="description"  class="form-control">
         </div>
 
         <div class="form-group">
-                <label for="telephone">Nom de la photo</label><br>
-                <input  id="telephone" type="text" name="photo"  class="form-control">
+                <label for="image">Nom de la photo</label><br>
+                <input  id="image" type="text" name="photo"  class="form-control">
             </div>
     
         <div class="form-group">
-            <label for="mail">Prix</label><br>
-            <input  id="mail" min=0 type="number" name="prix"  class="form-control">
+            <label for="px">Prix</label><br>
+            <input  id="prix" min=0 type="number" name="prix"  class="form-control">
         </div>
 
         <div class="form-group">
-                <label for="mail">Poids</label><br>
-                <input  id="mail" min=0 type="number" name="poids"  class="form-control">
+                <label for="poids">Poids</label><br>
+                <input  id="poids" min=0 type="number" name="poids"  class="form-control">
             </div>
 
             <div class="form-group">
-                    <label for="mail">Stock</label><br>
-                    <input  id="mail" min=0 type="number" name="stock"  class="form-control">
+                    <label for="stock">Stock</label><br>
+                    <input  id="stock" min=0 type="number" name="stock"  class="form-control">
                 </div>
 
             <div class="form-group">
-                    <label for="mail">Id Catégorie</label><br>
-                    <input  id="mail" min=1 max=5 type="number" name="categorie"  class="form-control">
+                    <label for="categorie">Id Catégorie</label><br>
+                    <input  id="categorie" min=1 max=5 type="number" name="categorie"  class="form-control">
                 </div>
     
                 <div class="form-group">
