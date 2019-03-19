@@ -80,8 +80,10 @@
             </div>
             <div class="col-lg-8 produit"><strong>{{$produit->name}}</strong><br>
                 <p>{{$produit->price}}€</p><br>
-                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}"> En savoir plus </a>          
-            </div> 
+                <a class="btn" href="{{route('description', ['id'=>$produit->id])}}"> En savoir plus </a>
+
+            </div>
+
         </div>
         @endif
         @endforeach

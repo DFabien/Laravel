@@ -19,6 +19,7 @@ class ProductController extends Controller
     public function show($id){
         $details= Products_Model::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
 
+
         return view('products/description', ['produit'=>$details]);
     }
 }
