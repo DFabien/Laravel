@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" />
 
     <title>@yield('title')</title>
 
@@ -19,7 +20,7 @@
     <div>
         @include('layouts/header')
     </div>
-    <div>
+    <div class="middleDiv">
         @yield('content')
     </div>
     <div>
