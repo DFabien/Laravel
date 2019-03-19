@@ -10,7 +10,6 @@ html{
 .headerNav{
     background-image: url("../images/background.jpg");
     background-size: cover;
-    margin-bottom: 30px;
 }
 .headerNav img{
     height: 50px;
@@ -41,14 +40,14 @@ html{
     Body Général
 ******************************************************************/
 body{
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 100%;*/
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #EFEFEF;
 }
 
 .middleDiv{
@@ -58,7 +57,50 @@ body{
 /******************************************************************
     Home
 ******************************************************************/
-
+.topHomePage{
+    background-image: url("../images/homeback.jpg");
+    min-height: 500px;
+    background-position-x: center;
+    color: white;
+}
+.topHomePage h3, .topHomePage h1, .topHomePage p{
+    margin-bottom: 20px;
+}
+.topHomePage h3{
+    font-weight: bold;
+}
+.topHomePage a{
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #F38A1E;
+    color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+    text-decoration: none;
+}
+.topHomePage a:hover{
+    background-color: white;
+    color: #F38A1E;
+}
+.homeTopContent{
+    padding: 30px 10px;
+}
+.brasseries{
+    margin-top: 80px;
+}
+.brasseries h4{
+    color: #F38A1E;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.brasseries .col div{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: white;
+    padding: 10px;
+}
 /******************************************************************
     Products
 ******************************************************************/
@@ -86,15 +128,16 @@ body{
     background-image: url("../images/background.jpg");
     background-size: cover;
     margin-top: 30px;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}
+.footerNav img{
+    height: 50px;
+    margin-bottom: 20px;
+}
+.footerNav h2{
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.footerNav ul{
-    margin: auto;
-    text-align: center;
-}
-.footerNav .nav-link{
-    color : white !important;
-}
-.footerNav .nav-link:hover{
-    color : #F38A1E !important;
-}
