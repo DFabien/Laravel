@@ -11,7 +11,9 @@
 |
 */
 // Basics routes
-Route::get('/test', 'BasicController@test');
+Route::get('/test', 'BasicController@test'); //test pratique avec alexandre
+
+
 Route::get('/', 'BasicController@index')->name('homepage'); // route vers l'index du site
 
 Route::get('/contact', 'BasicController@contact')->name('contact'); // route vers la page contact
