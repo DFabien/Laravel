@@ -53,7 +53,25 @@ body{
 .middleDiv{
     height: 100%;
 }
-
+.titre-principal{
+    margin: 50px 0;
+}
+.bouton{
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #F38A1E;
+    color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+    text-decoration: none;
+    display: inline-block;
+}
+.bouton:hover{
+    background-color: white;
+    color: #F38A1E;
+    text-decoration: none;
+}
 /******************************************************************
     Home
 ******************************************************************/
@@ -104,7 +122,22 @@ body{
 /******************************************************************
     Products
 ******************************************************************/
-
+.productList img{
+    height: 200px;
+}
+.productList{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+.containerListProduit {
+    margin-bottom: 20px;
+}
+.flexPosition{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /******************************************************************
     Basket
 ******************************************************************/
