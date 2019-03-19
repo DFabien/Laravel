@@ -9,6 +9,8 @@ class BasketController extends Controller
 {
     public function show(Request $request){
 
+
+
         $produits = $request->session()->get('basket', []);
 
         return view('basket/basket', ['produits'=>$produits]);
@@ -18,8 +20,12 @@ class BasketController extends Controller
         return view('basket.basket');
     }
 
-    public function delete($id){
-        return view('basket.basket');
+    public function delete(Request $request,$id){
+
+
+        $request->session()->forget('basket.'.$id);
+
+        return redirect(route('basket'));
     }
 
     public function discount($codePromo){
@@ -29,7 +35,8 @@ class BasketController extends Controller
     public function add(Request $request , $id){
 
         $panier= Products_Model::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
-        $request->session()->put('basket.'.$id, $panier );
+        $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
+
 
         return redirect(route('basket'));
     }

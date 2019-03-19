@@ -15,8 +15,15 @@
             <div class="col-lg-6 desc">
                 <h3>{{$produit->name}}</h3><br>
                 <p>{{$produit->description}}</p><br>
-                <p>{{$produit->price}}€</p><br>
-                <a class="btn" href="{{route('basketAdd', $produit->id)}}" > Ajouter au panier  </a>
+                <p>{{$produit->price/100}}€</p><br>
+
+                <form action="{{route('basketAdd', $produit->id)}}" method="post">
+                    @method('PUT')
+                    @csrf
+
+                    <input type="number" name="quantity" min="0" max="{{$produit->stock}}" value="1">
+                    <input type="submit" value="Ajouter au panier">
+                </form>
             </div>
         </div>
     </div>
