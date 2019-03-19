@@ -66,21 +66,21 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('categories/edit/{id}', 'AdminCategoriesController@updateCat')->name('adminCategoryEdit');
 
+    //AdminController
 
     Route::get('produit/add', 'AdminController@addProd')->name('adminProductAdd');
     Route::put('produit/add', 'AdminController@addProd2')->name('adminPdtAdd');
 
-
-    Route::get('produit/edit/{id}', 'AdminController@updateProduct')->name('adminEdit');
-    Route::put('produit/edit/{id}', 'AdminController@updateProduct2')->name('adminEdition');
+    //AdminProductsController
+    
+    Route::get('produit/edit/{id}', 'AdminProductsController@updateProduct')->name('adminEdit');
+    Route::put('produit/edit/{id}', 'AdminProductsController@updateProduct2')->name('adminEdition');
 
     Route::get('produits', 'AdminProductsController@showProdsAll')->name('adminProducts');
 
     Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
 
     Route::get('produit/{id}', 'AdminProductsController@showProd')->name('adminProduct');
-
-    Route::get('produit/edit/{id}', 'AdminProductsController@updateProd')->name('adminEdit');
 
     Route::get('produit/delete/{id}', 'AdminProductsController@deleteProd')->name('adminProductDelete');
 
