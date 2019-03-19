@@ -8,7 +8,7 @@ class Products_Model extends Model
 {
     protected $table = 'article'; //lien vers ma table article
     public $timestamps = false;  //Désactive la gestion des colonnes created_at et updated_at
-    public function commandes(){
-        return $this->hasOne('App\commandes_model');
+    public function article(){
+        return $this->belongTo('App\Products_Model');
     }
 }
