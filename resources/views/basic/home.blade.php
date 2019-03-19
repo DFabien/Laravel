@@ -35,26 +35,26 @@
                 </div>
                 <div class="col">
                     <div>
-                        <img src="{{asset('images/brasseries/portbrewing.png')}}" alt="lost abbey">
+                        <img src="{{asset('images/brasseries/portbrewing.png')}}" alt="PortBrewing">
                         <h5>Port Brewing</h5>
                     </div>
                 </div>
                 <div class="col">
                     <div>
-                        <img src="{{asset('images/brasseries/partizan.png')}}" alt="lost abbey">
-                        <h5>Partizan</h5>
-                    </div>
-                </div>
-                <div class="col">
-                    <div>
-                        <img src="{{asset('images/brasseries/oldnation.png')}}" alt="lost abbey">
-                        <h5>Old Nation</h5>
-                    </div>
-                </div>
-                <div class="col">
-                    <div>
-                        <img src="{{asset('images/brasseries/jesterking.png')}}" alt="lost abbey">
+                        <img src="{{asset('images/brasseries/jesterking.png')}}" alt="jester king">
                         <h5>Jester King</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img src="{{asset('images/brasseries/brewdog.png')}}" alt="BrewDog">
+                        <h5>BrewDog</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img src="{{asset('images/brasseries/bosteels.png')}}" alt="Bosteels">
+                        <h5>Bosteels</h5>
                     </div>
                 </div>
             </div>
