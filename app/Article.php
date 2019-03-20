@@ -18,6 +18,6 @@ class Article extends Model
     }
 
     public function discount(){
-        return $this->belongsTo('App\Discount');
+        return $this->belongsTo('App\Discount')->withPivot('qty');
     }
 }
