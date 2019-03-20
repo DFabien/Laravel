@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use App\Discount;
 
 class AdminProductsController extends Controller
 {
 
     public function showProdsAll(){
         $produits = Article::all();
-
         return view('Admin/listProducts',['liste'=>$produits]); //listProducts = nom de la vue
     }
 
@@ -21,7 +21,9 @@ class AdminProductsController extends Controller
 
     public function addProd(){
         $categories= Category::all();
-        return view('Admin.addProduct', ['categorie'=>$categories]);
+        $discount= Discount::All();
+        
+        return view('Admin.addProduct', ['categorie'=>$categories, 'discounts'=>$discount]);
     }
 
     public function addProd2(request $request){
@@ -33,14 +35,16 @@ class AdminProductsController extends Controller
         $ajout -> weight = $request -> poids;
         $ajout -> stock = $request -> stock;
         $ajout -> category_id = $request -> categorie;  //id_cat nom de la bdd, categorie nom du name formulaire
+        $ajout -> discount_id = $request -> discount;
         $ajout -> save(); //pour sauvegarder les ajouts
         return redirect('admin/produits'); //retourne sur l'url
     }
 
     public function updateProduct(request $request, $id){
         $article = Article::find($id);
-
-        return view('Admin/updateProduct', ['modifier'=>$article]);
+        $category= Category::All();
+        $discount= Discount::All();
+        return view('Admin/updateProduct', ['articles'=>$article, 'categories'=>$category, 'discounts'=>$discount]);
     }
 
     public function updateProduct2(request $request, $id){

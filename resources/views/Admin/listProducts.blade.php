@@ -1,4 +1,4 @@
-@extends('layouts/layout')
+@extends('layouts/admin/layout')
 
 @section('title')
     listPdt
@@ -6,10 +6,11 @@
 
 @section('content')
     
-<h1>LISTE DES PRODUITS</h1>
+<h1>PRODUCTS LIST</h1>
 
 <p>
-<a type="button" href="{{route('adminProductAdd')}}"><i class="fas fa-cart-plus"></i> AJOUTER UN PRODUIT</a>
+<a type="button" href="{{route('adminProductAdd')}}"><i class="fas fa-cart-plus"></i> 
+  Add a product</a>
 </p>
 
 <table class="table">
@@ -20,6 +21,7 @@
         <th scope="col">Price</th>
         <th scope="col">Stock</th>
         <th scope="col">Category</th>
+        <th scope="col">discounts</th>
         <th scope="col">Update</th>
         <th scope="col">Delete</th>
       </tr>
@@ -30,7 +32,13 @@
         <td>{{$produit->name}}</td>
         <td>{{$produit->price}}</td>
         <td>{{$produit->stock}}</td>
-        <td>{{$produit->category->category}}</td>
+        <td>{{$produit->category->id}} - {{$produit->category->category}}</td>
+        <td> 
+          @if($produit->discount)
+          {{$produit->discount->id}} - {{$produit->discount->name}}
+          @else()NULL
+        @endif
+        </td>
         <td><a type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></a></td>
         
         <!-- Button trigger modal -->
@@ -48,7 +56,7 @@
                 </button>
               </div>
               <div class="modal-footer">
-                <a type="button" class="btn btn-secondary" >No</a>
+                <a type="button" class="btn btn-secondary">No</a>
                 <form action={{route('adminProductDelete', $produit->id)}} method="post"> 
                     @method('delete')
                     @csrf

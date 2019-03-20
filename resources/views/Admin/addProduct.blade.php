@@ -6,18 +6,18 @@ addProd
 
 @section('content')
 <div class="container">
-    <h1 class="titre-principal"> Ajouter un produit </h1>
+    <h1 class="titre-principal"> Add a product </h1>
     <form action={{route('adminPdtAdd')}} method="post">
         @method('PUT')
         @csrf
         
         <div class="form-group">
             <label for="name">Name</label><br>
-            <input type="text" id="name" name="name" class="form-control">
+            <input type="text" id="name" name="name" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="desc">Description</label><br>
-            <input  id="decription" type="text" name="description"  class="form-control">
+            <input  id="decription" type="text" name="description"  class="form-control" required>
         </div>
         
         <div class="form-group">
@@ -27,25 +27,35 @@ addProd
         
         <div class="form-group">
             <label for="px">Price</label><br>
-            <input  id="prix" min=0 type="number" name="prix"  class="form-control">
+            <input  id="prix" min=0 type="number" name="prix"  class="form-control" required>
         </div>
         
         <div class="form-group">
             <label for="poids">Weight</label><br>
-            <input  id="weight" min=0 type="number" name="poids"  class="form-control">
+            <input  id="weight" min=0 type="number" name="poids"  class="form-control" required>
         </div>
         
         <div class="form-group">
             <label for="stock">Stock</label><br>
-            <input  id="stock" min=0 type="number" name="stock"  class="form-control">
+            <input  id="stock" min=0 type="number" name="stock"  class="form-control" required>
         </div>
         
         <div class="form-group">
-            <label for="objet">Category id</label><br>
-            <select name="categorie" id="category_id">
+                <label for="objet">Discount</label><br>
+                <select name="discount">
+                    <option value="" disabled="" selected="">Choose</option>
+                    @foreach ($discounts as $discount)
+                    <option value="{{$discount->id}}"> {{$discount->name}} </option>
+                    @endforeach
+                </select>
+            </div>
+
+        <div class="form-group">
+            <label for="objet">Category</label><br>
+            <select required name="categorie">
                 <option value="" disabled="" selected="">Choose</option>
                 @foreach ($categorie as $cat)
-                <option value="{{$cat->id}}"> {{$cat->category}}</option>
+                <option value="{{$cat->id}}"> {{$cat->category}} </option>
                 @endforeach
             </select>
         </div>
