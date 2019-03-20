@@ -31,7 +31,7 @@
         <td>{{$produit->price}}</td>
         <td>{{$produit->stock}}</td>
         <td>{{$produit->category->category}}</td>
-        <td><button type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></button></td>
+        <td><a type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></a></td>
         
         <!-- Button trigger modal -->
         <td><button type="button" data-toggle="modal" data-target="{{'#modal' . $produit->id}}"><i class="far fa-trash-alt"></i></button></td>
