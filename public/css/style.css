@@ -72,6 +72,24 @@ body{
     color: #F38A1E;
     text-decoration: none;
 }
+.center{
+    text-align: center;
+}
+.btn-ico{
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+.btn-ico:hover{
+    color: white;
+}
+.btn-ico-blue{
+    background-color: #0069d9;
+}
+.btn-ico-blue:hover{
+    background-color: #007bff;
+}
 /******************************************************************
     Home
 ******************************************************************/
@@ -173,4 +191,18 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
-
+/******************************************************************
+    Admin Nav
+******************************************************************/
+.AdminNav{
+    margin-bottom: 50px;
+}
+/******************************************************************
+    Admin Home
+******************************************************************/
+.adminHome table{
+    background-color: white;
+}
+.adminHome h2{
+    margin-bottom: 20px;
+}

@@ -18,6 +18,6 @@ class Order extends Model
     }
 
     public function articles(){
-        return $this->belongsToMany('App\Article');
+        return $this->belongsToMany('App\Article')->withPivot('qty'); //withPivot , defini les champs de la table de relation
     }
 }
