@@ -5,7 +5,10 @@
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad at atque incidunt iure natus nisi omnis possimus
-        tempore unde. Blanditiis doloremque ea esse expedita, ipsum porro quae vitae? Laudantium.
-    </p>
+    <h1>Ajouter une Categorie</h1>
+    <form method="post" action="toto.php">
+        <label>Nom: </label> <input type="text" name ="nom" >
+        <input type="submit" name="Confirmer" value="ajouter">
+
+    </form>
 @endsection

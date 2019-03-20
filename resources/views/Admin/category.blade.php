@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<button>Ajouter une categorie</button>
+ <a type="button" href={{route('adminCategoryAdd')}}>Ajouter une categorie</a>
     <table class="table table-striped">
         <thead>
         <tr>
