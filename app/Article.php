@@ -10,7 +10,7 @@ class Article extends Model
     public $timestamps = false;  //Désactive la gestion des colonnes created_at et updated_at
 
     public function orders(){
-        return $this->belongsToMany('App\Order');
+        return $this->belongsToMany('App\Order')->withPivot('qty');
     }
 
     public function category(){
@@ -18,6 +18,6 @@ class Article extends Model
     }
 
     public function discount(){
-        return $this->belongsTo('App\Discount')->withPivot('qty');
+        return $this->belongsTo('App\Discount');
     }
 }

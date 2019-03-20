@@ -90,6 +90,13 @@ body{
 .btn-ico-blue:hover{
     background-color: #007bff;
 }
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.titre-secondaire{
+    margin-bottom: 30px;
+}
 /******************************************************************
     Home
 ******************************************************************/
@@ -190,6 +197,10 @@ body{
 .footerNav h2{
     font-weight: bold;
     margin-bottom: 20px;
+}
+.footerNav a{
+    color: white;
+    text-decoration: none;
 }
 /******************************************************************
     Admin Nav
