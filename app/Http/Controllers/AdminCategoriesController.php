@@ -14,7 +14,22 @@ class AdminCategoriesController extends Controller
         return view('Admin/category',['categories'=>$categories]);
     }
 
+    public function store(Request $request)
+    {
+        $name = $request->input('nom');
+
+        $cat = new Category;
+        $cat->category = $name;
+        $cat->save();
+
+        //Category::create(['category'=>$name]);
+        $categories=Category::all();
+        return view('Admin/category',['categories'=>$categories]);
+        //return redirect()-> route('adminCategories');
+    }
+
     public function addCat(){
+
         return view('Admin/addCategory');
     }
 
