@@ -11,33 +11,33 @@
             @method('PUT')
             @csrf
     
-        <div class="form-group">
-            <label for="name">Désignation</label><br>
-        <input type="text" id="name" name="name" class="form-control" value="{{$modifier->name}}">
-        </div>
-        <div class="form-group">
-            <label for="telephone">Description</label><br>
-            <input  id="telephone" type="text" name="description"  class="form-control" value="{{$modifier->description}}">
-        </div>
-
-        <div class="form-group">
-                <label for="telephone">Nom de la photo</label><br>
-                <input  id="telephone" type="text" name="photo"  class="form-control" value="{{$modifier->photo}}">
-            </div>
-    
-        <div class="form-group">
-            <label for="mail">Prix</label><br>
-            <input  id="mail" min=0 type="number" name="prix"  class="form-control" value="{{$modifier->price}}">
-        </div>
-
-        <div class="form-group">
-                <label for="mail">Poids</label><br>
-                <input  id="mail" min=0 type="number" name="poids"  class="form-control" value="{{$modifier->weight}}">
-            </div>
-
             <div class="form-group">
-                    <label for="mail">Stock</label><br>
-                    <input  id="mail" min=0 type="number" name="stock"  class="form-control" value="{{$modifier->stock}}">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description</label><br>
+                    <input  id="decription" type="text" name="description"  class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Picture</label><br>
+                    <input  id="photo" type="text" name="photo"  class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="px">Price</label><br>
+                    <input  id="prix" min=0 type="number" name="prix"  class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="poids">Weight</label><br>
+                    <input  id="weight" min=0 type="number" name="poids"  class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="stock">Stock</label><br>
+                    <input  id="stock" min=0 type="number" name="stock"  class="form-control">
                 </div>
 
             <div class="form-group">

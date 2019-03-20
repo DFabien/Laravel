@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 class AdminProductsController extends Controller
 {
@@ -19,7 +20,8 @@ class AdminProductsController extends Controller
     }
 
     public function addProd(){
-        return view('Admin.addProduct');
+        $categories= Category::all();
+        return view('Admin.addProduct', ['categorie'=>$categories]);
     }
 
     public function addProd2(request $request){
@@ -30,7 +32,7 @@ class AdminProductsController extends Controller
         $ajout -> price = $request -> prix;
         $ajout -> weight = $request -> poids;
         $ajout -> stock = $request -> stock;
-        $ajout -> id_cat = $request -> categorie;  //id_cat nom de la bdd, categorie nom du name formulaire
+        $ajout -> category_id = $request -> categorie;  //id_cat nom de la bdd, categorie nom du name formulaire
         $ajout -> save(); //pour sauvegarder les ajouts
         return redirect('admin/produits'); //retourne sur l'url
     }
@@ -49,7 +51,7 @@ class AdminProductsController extends Controller
         $modif -> price = $request -> prix;
         $modif -> weight = $request -> poids;
         $modif -> stock = $request -> stock;
-        $modif -> id_cat = $request -> categorie;
+        $modif -> category_id = $request -> categorie;
         $modif -> save();
         return redirect('admin/produits');
     }
