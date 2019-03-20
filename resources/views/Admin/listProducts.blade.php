@@ -8,7 +8,9 @@
     
 <h1>LISTE DES PRODUITS</h1>
 
-<h1 class="titre-principal"> <a class="btn" href="{{route('adminProductAdd')}}">AJOUTER UN PRODUIT</a></h1>
+<p>
+<a type="button" href="{{route('adminProductAdd')}}"><i class="fas fa-cart-plus"></i> AJOUTER UN PRODUIT</a>
+</p>
 
 <table class="table">
     <thead class="thead-dark">
@@ -29,10 +31,35 @@
         <td>{{$produit->price}}</td>
         <td>{{$produit->stock}}</td>
         <td>{{$produit->category->category}}</td>
-        <td><button type="button" class="btn btn-dark" href="{{route('adminEdit', $produit->id)}}"></button></td>
-        <td><button type="button" class="btn btn-dark" href="{{route('adminProductDelete', $produit->id)}}"></button></td>
+        <td><button type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></button></td>
+        
+        <!-- Button trigger modal -->
+        <td><button type="button" data-toggle="modal" data-target="{{'#modal' . $produit->id}}"><i class="far fa-trash-alt"></i></button></td>
+
+        <!-- Modal -->
+        <div class="modal fade" id="{{'modal' . $produit->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                    Do you confirm the deletion ?</h5>
+                <button type="button" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-footer">
+                <a type="button" class="btn btn-secondary" >No</a>
+                <form action={{route('adminProductDelete', $produit->id)}} method="post"> 
+                    @method('delete')
+                    @csrf
+                  <input type="submit" class="btn btn-primary" value="Yes">
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </tr>
       @endforeach </tbody>
-  </table>
-  
-@endsection
+    </table>
+    
+    @endsection
