@@ -1,14 +1,26 @@
-@extends('layouts/layout')
+@extends('layouts/admin/layout')
 
 @section('title')
-    deliv
+    Livraison
 
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ea id ipsam magni obcaecati quisquam vitae?
-        Assumenda exercitationem expedita facilis incidunt ipsa iste labore maxime molestiae rerum sapiente sequi,
-        veniam?
-    </p>
+    <div class="container">
+        @foreach($deliveries as $key => $deliveryGroup)
+            <div class="delivery">
+                <h2>{{ $key }}</h2>
+                @foreach($deliveryGroup as $delivery)
+                    <div>
+                        <h3>{{ $delivery['name'] }}</h3>
+                        <p>{{ $delivery['delay'] }}</p>
+                        <p>{{ $delivery['content'] }}</p>
+                        <p>{{ $delivery['price'] }} €</p>
+                    </div>
+                @endforeach
+            </div>
+        @endforeach
+    </div>
+
 
 @endsection

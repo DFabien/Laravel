@@ -217,3 +217,14 @@ iframe{
 .adminHome h2{
     margin-bottom: 20px;
 }
+/******************************************************************
+    Admin Delivery
+******************************************************************/
+.delivery{
+    margin-bottom: 50px;
+}
+.delivery div{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
