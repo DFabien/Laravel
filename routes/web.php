@@ -98,10 +98,6 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
 
-    Route::get('historique/commande/{id}', 'AdminController@historicOrder')->name('adminOrders');
-
-    Route::get('historique/detail/{id}', 'AdminController@detailOrder')->name('adminOrder');
-
     Route::get('users', 'AdminController@showUsersAll')->name('adminUsers');
 
     Route::get('user/order/{id}', 'AdminController@orderUser')->name('adminUser');
@@ -109,5 +105,12 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('user/detail/order/{id}', 'AdminController@orderDetUser')->name('adminOrderUser');
 
     Route::get('/', 'AdminController@home')->name('adminHome');
+
+    // AdminOrderController
+
+    Route::get('historique/commande', 'AdminOrderController@historicOrder')->name('adminOrders');
+
+    Route::get('historique/detail/{id}', 'AdminOrderController@detailOrder')->name('adminOrder');
+
 });
 
