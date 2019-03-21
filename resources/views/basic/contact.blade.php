@@ -9,7 +9,7 @@
     <div class="container">
         <h1 class="titre-principal">Nous Contacter</h1>
         <div class="row">
-            <div class="col col-lg-6">php
+            <div class="col col-lg-6">
                 <p><strong>SquirrelBeers</strong></p>
                 <p> 7 Rue Hoche 38000 Grenoble</p>
                 <p>09 55 98 99 77</p>
