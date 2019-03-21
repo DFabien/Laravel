@@ -17,7 +17,6 @@ class AdminController extends Controller
     public function showCatAll(){
         return view('Admin/category');
     }
-
     public function addCat(){
         return view('Admin/addCategory');
     }
@@ -51,7 +50,8 @@ class AdminController extends Controller
     }
 
     public function showDelivAll(){
-        return view('Admin.delivery');
+        $deliveries = config('delivery');
+        return view('Admin.delivery' , ['deliveries' => $deliveries]);
     }
 
     public function historicOrder(){

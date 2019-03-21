@@ -90,6 +90,13 @@ body{
 .btn-ico-blue:hover{
     background-color: #007bff;
 }
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.titre-secondaire{
+    margin-bottom: 30px;
+}
 /******************************************************************
     Home
 ******************************************************************/
@@ -191,6 +198,10 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
+.footerNav a{
+    color: white;
+    text-decoration: none;
+}
 /******************************************************************
     Admin Nav
 ******************************************************************/
@@ -205,4 +216,15 @@ body{
 }
 .adminHome h2{
     margin-bottom: 20px;
+}
+/******************************************************************
+    Admin Delivery
+******************************************************************/
+.delivery{
+    margin-bottom: 50px;
+}
+.delivery div{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }

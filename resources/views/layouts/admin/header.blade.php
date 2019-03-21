@@ -18,7 +18,7 @@
                 <a class="nav-link" href="#">Codes promo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Livraison</a>
+                <a class="nav-link" href="{{ route('adminDelivery') }}">Livraison</a>
             </li>
         </ul>
     </div>
