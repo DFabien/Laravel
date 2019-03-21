@@ -54,14 +54,6 @@ class AdminController extends Controller
         return view('Admin.delivery' , ['deliveries' => $deliveries]);
     }
 
-    public function historicOrder(){
-        return view('Admin.historicOrder');
-    }
-
-    public function detailOrder($id){
-        return view('Admin.historicDetail');
-    }
-
     public function showUsersAll(){
         return view('Admin.users');
     }
