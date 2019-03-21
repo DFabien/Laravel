@@ -30,9 +30,11 @@ Route::prefix('panier')->group(function () {
 
     Route::get('/', 'BasketController@show')->name('basket'); // route vers le panier
 
-    Route::get('modification', 'BasketController@update')->name('basketUpdate'); // route vers
+    Route::put('modification/{id}', 'BasketController@update')->name('basketUpdate'); // route vers
 
-    Route::get('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
+    Route::delete('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
+
+    Route::delete('vider', 'BasketController@erase')->name('basketErase');
 
     Route::get('{codePromo}', 'BasketController@discount')->name('basketDiscount'); // route vers
 
