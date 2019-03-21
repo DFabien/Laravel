@@ -22,10 +22,7 @@ class AdminCategoriesController extends Controller
         $cat->category = $name;
         $cat->save();
 
-        //Category::create(['category'=>$name]);
-        $categories=Category::all();
-        return view('Admin/category',['categories'=>$categories]);
-        //return redirect()-> route('adminCategories');
+        return redirect(route('adminCategories'));
     }
 
     public function addCat(){
