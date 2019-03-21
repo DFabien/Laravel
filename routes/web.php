@@ -88,9 +88,13 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('discount/add', 'AdminDiscountController@addDiscount')->name('adminDiscountAdd');
 
-    Route::get('discount/edit', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
+    Route::get('discount/edit/{id}', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
 
-    Route::get('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+    Route::delete('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+
+    Route::post('discount/add', 'AdminDiscountController@store')->name('adminDiscountStore');
+
+    Route::put('discount/add', 'AdminDiscountController@storeUpdate')->name('adminDiscountStoreUpdate');
 
 
     // AdminController
