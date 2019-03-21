@@ -65,6 +65,7 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('categories/add', 'AdminCategoriesController@addCat')->name('adminCategoryAdd');
 
     Route::get('categories/edit/{id}', 'AdminCategoriesController@updateCat')->name('adminCategoryEdit');
+    Route::post('categories/add', 'AdminCategoriesController@store')->name('adminCategoryStore');
 
     //AdminProductsController
 
@@ -75,8 +76,6 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::put('produit/edit/{id}', 'AdminProductsController@updateProduct2')->name('adminEdition');
 
     Route::get('produits', 'AdminProductsController@showProdsAll')->name('adminProducts');
-
-    Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
 
     Route::get('produit/{id}', 'AdminProductsController@showProd')->name('adminProduct');
 
