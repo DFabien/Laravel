@@ -6,43 +6,43 @@ listPdt
 
 @section('content')
 
-<h1>PRODUCTS LIST</h1>
+  <h1>PRODUCTS LIST</h1>
 
-<p>
-  <a type="button" href="{{route('adminProductAdd')}}"><i class="fas fa-cart-plus"></i> 
-    Add a product</a>
+  <p>
+    <a type="button" href="{{route('adminProductAdd')}}"><i class="fas fa-cart-plus"></i> 
+      Add a product</a>
   </p>
-  
+    
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Stock</th>
-        <th scope="col">Category</th>
-        <th scope="col">discounts</th>
-        <th scope="col">Update</th>
-        <th scope="col">Delete</th>
+        <th scope="col" class="center">id</th>
+        <th scope="col" class="center">Name</th>
+        <th scope="col" class="center">Price</th>
+        <th scope="col" class="center">Stock</th>
+        <th scope="col" class="center">Category</th>
+        <th scope="col" class="center">discounts</th>
+        <th scope="col" class="center">Update</th>
+        <th scope="col" class="center">Delete</th>
       </tr>
     </thead>
     <tbody> @foreach ($liste as $produit)
       <tr>
-        <td>{{$produit->id}}</td>
-        <td>{{$produit->name}}</td>
-        <td>{{$produit->price}}</td>
-        <td>{{$produit->stock}}</td>
-        <td>{{$produit->category->id}} - {{$produit->category->category}}</td>
-        <td> 
+        <td class="center">{{$produit->id}}</td>
+        <td class="center">{{$produit->name}}</td>
+        <td class="center">{{$produit->price}}</td>
+        <td class="center">{{$produit->stock}}</td>
+        <td class="center">{{$produit->category->id}} - {{$produit->category->category}}</td>
+        <td class="center"> 
           @if($produit->discount)
           {{$produit->discount->id}} - {{$produit->discount->name}}
           @else()NULL
           @endif
         </td>
-        <td><a type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></a></td>
+        <td class="center"><a type="button" href="{{route('adminEdit', $produit->id)}}"><i class="far fa-edit"></i></a></td>
         
         <!-- Button trigger modal -->
-        <td><button type="button" data-toggle="modal" data-target="{{'#modal' . $produit->id}}"><i class="far fa-trash-alt"></i></button></td>
+        <td class="center"><button type="button" data-toggle="modal" data-target="{{'#modal' . $produit->id}}"><i class="far fa-trash-alt"></i></button></td>
         
         <!-- Modal -->
         <div class="modal fade" id="{{'modal' . $produit->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelCenterTitle" aria-hidden="true">
@@ -54,20 +54,20 @@ listPdt
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
-                </div>
-                <div class="modal-footer">
-                  <a type="button" data-dismiss="modal" class="btn btn-secondary">No</a>
-                  <form action={{route('adminProductDelete', $produit->id)}} method="post"> 
-                    @method('delete')
-                    @csrf
-                    <input type="submit" class="btn btn-primary" value="Yes">
-                  </form>
-                </div>
               </div>
+              <div class="modal-footer">
+                <a type="button" data-dismiss="modal" class="btn btn-secondary">No</a>
+                <form action={{route('adminProductDelete', $produit->id)}} method="post"> 
+                @method('delete')
+                @csrf
+                <input type="submit" class="btn btn-primary" value="Yes">
+              </form>
+            </div>
             </div>
           </div>
+        </div>
         </tr>
         @endforeach </tbody>
-      </table>
+  </table>
       
-      @endsection
+@endsection
