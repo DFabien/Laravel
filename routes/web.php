@@ -30,13 +30,15 @@ Route::prefix('panier')->group(function () {
 
     Route::get('/', 'BasketController@show')->name('basket'); // route vers le panier
 
-    Route::get('modification', 'BasketController@update')->name('basketUpdate'); // route vers
+    Route::put('modification/{id}', 'BasketController@update')->name('basketUpdate'); // route vers
 
-    Route::get('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
+    Route::delete('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
+
+    Route::delete('vider', 'BasketController@erase')->name('basketErase');
 
     Route::get('{codePromo}', 'BasketController@discount')->name('basketDiscount'); // route vers
 
-    Route::get('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
+    Route::put('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
 });
 
 // User routes
@@ -91,18 +93,18 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('discount/add', 'AdminDiscountController@addDiscount')->name('adminDiscountAdd');
 
-    Route::get('discount/edit', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
+    Route::get('discount/edit/{id}', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
 
-    Route::get('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+    Route::delete('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+
+    Route::post('discount/add', 'AdminDiscountController@store')->name('adminDiscountStore');
+
+    Route::put('discount/add', 'AdminDiscountController@storeUpdate')->name('adminDiscountStoreUpdate');
 
 
     // AdminController
 
     Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
-
-    Route::get('historique/commande/{id}', 'AdminController@historicOrder')->name('adminOrders');
-
-    Route::get('historique/detail/{id}', 'AdminController@detailOrder')->name('adminOrder');
 
     Route::get('users', 'AdminController@showUsersAll')->name('adminUsers');
 
@@ -111,5 +113,12 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('user/detail/order/{id}', 'AdminController@orderDetUser')->name('adminOrderUser');
 
     Route::get('/', 'AdminController@home')->name('adminHome');
+
+    // AdminOrderController
+
+    Route::get('historique/commande', 'AdminOrderController@historicOrder')->name('adminOrders');
+
+    Route::get('historique/detail/{id}', 'AdminOrderController@detailOrder')->name('adminOrder');
+
 });
 

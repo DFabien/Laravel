@@ -3,34 +3,68 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Products_Model;
+use App\Article;
 
 class BasketController extends Controller
 {
     public function show(Request $request){
-        $produits=$request->session()->get('basket', []);
+        
+        $produits = $request->session()->get('basket', []);
+        
+        $total=0;
+        
+        foreach ($produits as $produit){
+            $total+=($produit['produit']->price/100) * ($produit['quantity']);
+            
+        }
+        return view('basket/basket', ['produits'=>$produits,'total'=>$total]);
+    }
     
-        return view('basket/basket', ['produits'=>$produits]);
+    
+    
+    public function update(Request $request, $id){
+        
+        $panier= Article::find($id);
+        $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
+        
+        return redirect(route('basket'));
     }
-
-    public function update(){
-        return view('basket.basket');
+    
+    
+    
+    public function delete(Request $request,$id){
+        
+        
+        $request->session()->forget('basket.'.$id);
+        
+        return redirect(route('basket'));
     }
-
-    public function delete($id){
-        return view('basket.basket');
-    }
-
-    public function discount($codePromo){
-        return view('basket.basket');
-    }
-
-    public function add(Request $request, $id){
-
-        $panier= Products_Model::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
-        $request->session()->put('basket.'.$id, $panier);
+    
+    
+    
+    public function erase(Request $request){
+        
+        $request->session()->forget('basket');
         
         return redirect(route('products'));
     }
-
+    
+    
+    
+    public function discount($codePromo){
+        return view('basket.basket');
+    }
+    
+    
+    
+    public function add(Request $request , $id){
+        
+        
+        $panier= Article::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
+        $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
+        
+        
+        return redirect(route('basket'));
+    }
+    
 }

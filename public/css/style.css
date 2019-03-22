@@ -40,10 +40,9 @@ html{
     Body Général
 ******************************************************************/
 body{
-    /*display: flex;
+    display: flex;
+    min-height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;*/
 }
 
 body{
@@ -51,7 +50,7 @@ body{
 }
 
 .middleDiv{
-    height: 100%;
+    flex: 1;
 }
 .titre-principal{
     margin: 50px 0;
@@ -80,15 +79,29 @@ body{
     color: white;
     padding: 6px 10px;
     border-radius: 5px;
+    text-decoration: none;
 }
 .btn-ico:hover{
     color: white;
+    text-decoration: none;
 }
 .btn-ico-blue{
     background-color: #0069d9;
 }
 .btn-ico-blue:hover{
     background-color: #007bff;
+}
+.btn-ico-red{
+    background-color: #dc3545;
+}
+.btn-ico-red:hover{
+    background-color: #c82333;
+}
+.btn-ico-green{
+    background-color: #28a745;
+}
+.btn-ico-green:hover{
+    background-color: #218838;
 }
 iframe{
     width: 100%;
@@ -167,7 +180,9 @@ iframe{
     Basket
 ******************************************************************/
 
-
+.panier img{
+    height: 70px;
+}
 
 
 /******************************************************************
@@ -227,4 +242,11 @@ iframe{
     background-color: white;
     padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.15);
+}
+/******************************************************************
+    Admin Discount
+******************************************************************/
+.adminDiscount{
+    margin-top: 40px;
+    background-color: white;
 }
