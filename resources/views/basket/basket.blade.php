@@ -51,6 +51,7 @@
                         <td>{{$produit['produit']->description}}</td>
                         <td>{{$produit['produit']->price/100}}€</td>
                         <td>
+
                             <form action="{{route('basketUpdate', $produit['produit']->id)}}" method="post">
                                 @method('PUT')
                                 @csrf
@@ -63,54 +64,30 @@
                             </form>
                         </td>
 
-
-                        <td>{{($produit['produit']->price/100) * ($produit['quantity'])}}</td>
+                        <td>{{($produit['produit']->price/100) * ($produit['quantity'])}}€</td>
                         <td>
                             <form action="{{route('basketDelete', $produit['produit']->id)}}" method="post">
                                 @method('DELETE')
                                 @csrf
 
-                                <span>
-                            <button type="button" class="fas fa-trash" data-toggle="modal" data-target="#exampleModal">
 
-                            </button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Suppression d'un article</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <p>Etes vous sûr de vouloir supprimer cet article</p>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="far fa-times-circle" data-dismiss="modal"></button>
-                                            <button type="submit" class="fas fa-check-square"></button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
+                            <button type="button" class="fas fa-trash" data-toggle="modal" data-target="{{'#modal' . $produit['produit']->id }}"></button>
 
-                        </span>
+
+                                @include ('layouts.modalDelete')
                             </form>
-                        </td>
 
-
+                       </td>
                     </tr>
-
-
                 @endforeach
+
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><b>{{$total}}</b></td>
+                    <td><b>{{$total}} €</b></td>
                 </tr>
                 </tbody>
             </table>
@@ -119,8 +96,8 @@
                 @csrf
 
                 <span>
-                <button type="submit" class="btn btn-primary btn-lg">Vider le Panier</button>
-
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button>
+                @include ('layouts/modalErase')
             </span>
             </form>
             {{--{{$total}}--}}
