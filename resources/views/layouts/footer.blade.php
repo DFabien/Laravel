@@ -17,8 +17,8 @@
             </div>
             <div class="col">
                 <h2>Nous suivre</h2>
-                <p>Contact</p>
-                <p>Mentions légales</p>
+                <p><a href="{{ route('contact') }}">Contact</a></p>
+                <p><a href="{{ route('delivery') }}">Livraison</a></p>
                 <p>Conditions générales de vente</p>
             </div>
         </div>

@@ -40,10 +40,9 @@ html{
     Body Général
 ******************************************************************/
 body{
-    /*display: flex;
+    display: flex;
+    min-height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;*/
 }
 
 body{
@@ -51,9 +50,66 @@ body{
 }
 
 .middleDiv{
+    flex: 1;
+}
+.titre-principal{
+    margin: 50px 0;
+}
+.bouton{
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #F38A1E;
+    color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+    text-decoration: none;
+    display: inline-block;
+}
+.bouton:hover{
+    background-color: white;
+    color: #F38A1E;
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+}
+.btn-ico{
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn-ico:hover{
+    color: white;
+    text-decoration: none;
+}
+.btn-ico-blue{
+    background-color: #0069d9;
+}
+.btn-ico-blue:hover{
+    background-color: #007bff;
+}
+.btn-ico-red{
+    background-color: #dc3545;
+}
+.btn-ico-red:hover{
+    background-color: #c82333;
+}
+.btn-ico-green{
+    background-color: #28a745;
+}
+.btn-ico-green:hover{
+    background-color: #218838;
+}
+iframe{
+    width: 100%;
     height: 100%;
 }
-
+.titre-secondaire{
+    margin-bottom: 30px;
+}
 /******************************************************************
     Home
 ******************************************************************/
@@ -104,7 +160,22 @@ body{
 /******************************************************************
     Products
 ******************************************************************/
-
+.productList img{
+    height: 200px;
+}
+.productList{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+.containerListProduit {
+    margin-bottom: 20px;
+}
+.flexPosition{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /******************************************************************
     Basket
 ******************************************************************/
@@ -142,4 +213,40 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
-
+.footerNav a{
+    color: white;
+    text-decoration: none;
+}
+/******************************************************************
+    Admin Nav
+******************************************************************/
+.AdminNav{
+    margin-bottom: 50px;
+}
+/******************************************************************
+    Admin Home
+******************************************************************/
+.adminHome table{
+    background-color: white;
+}
+.adminHome h2{
+    margin-bottom: 20px;
+}
+/******************************************************************
+    Admin Delivery
+******************************************************************/
+.delivery{
+    margin-bottom: 50px;
+}
+.delivery div{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+/******************************************************************
+    Admin Discount
+******************************************************************/
+.adminDiscount{
+    margin-top: 40px;
+    background-color: white;
+}

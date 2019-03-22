@@ -67,24 +67,21 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
     Route::get('categories/add', 'AdminCategoriesController@addCat')->name('adminCategoryAdd');
 
     Route::get('categories/edit/{id}', 'AdminCategoriesController@updateCat')->name('adminCategoryEdit');
+    Route::post('categories/add', 'AdminCategoriesController@store')->name('adminCategoryStore');
 
+    //AdminProductsController
 
-    Route::get('produit/add', 'AdminController@addProd')->name('adminProductAdd');
-    Route::put('produit/add', 'AdminController@addProd2')->name('adminPdtAdd');
+    Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
+    Route::put('produit/add', 'AdminProductsController@addProd2')->name('adminPdtAdd');
 
-
-    Route::get('produit/edit/{id}', 'AdminController@updateProduct')->name('adminEdit');
-    Route::put('produit/edit/{id}', 'AdminController@updateProduct2')->name('adminEdition');
+    Route::get('produit/edit/{id}', 'AdminProductsController@updateProduct')->name('adminEdit');
+    Route::put('produit/edit/{id}', 'AdminProductsController@updateProduct2')->name('adminEdition');
 
     Route::get('produits', 'AdminProductsController@showProdsAll')->name('adminProducts');
 
-    Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
-
     Route::get('produit/{id}', 'AdminProductsController@showProd')->name('adminProduct');
 
-    Route::get('produit/edit/{id}', 'AdminProductsController@updateProd')->name('adminEdit');
-
-    Route::get('produit/delete/{id}', 'AdminProductsController@deleteProd')->name('adminProductDelete');
+    Route::delete('produit/delete/{id}', 'AdminProductsController@deleteProd')->name('adminProductDelete');
 
 
     // AdminDiscountController
@@ -93,23 +90,32 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::get('discount/add', 'AdminDiscountController@addDiscount')->name('adminDiscountAdd');
 
-    Route::get('discount/edit', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
+    Route::get('discount/edit/{id}', 'AdminDiscountController@updateDiscount')->name('adminDiscountEdit');
 
-    Route::get('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+    Route::delete('discount/delete/{id}', 'AdminDiscountController@deleteDiscount')->name('adminDiscountDelete');
+
+    Route::post('discount/add', 'AdminDiscountController@store')->name('adminDiscountStore');
+
+    Route::put('discount/add', 'AdminDiscountController@storeUpdate')->name('adminDiscountStoreUpdate');
 
 
     // AdminController
 
     Route::get('delivery', 'AdminController@showDelivAll')->name('adminDelivery');
 
-    Route::get('historique/commande/{id}', 'AdminController@historicOrder')->name('adminOrders');
-
-    Route::get('historique/detail/{id}', 'AdminController@detailOrder')->name('adminOrder');
-
     Route::get('users', 'AdminController@showUsersAll')->name('adminUsers');
 
     Route::get('user/order/{id}', 'AdminController@orderUser')->name('adminUser');
 
     Route::get('user/detail/order/{id}', 'AdminController@orderDetUser')->name('adminOrderUser');
+
+    Route::get('/', 'AdminController@home')->name('adminHome');
+
+    // AdminOrderController
+
+    Route::get('historique/commande', 'AdminOrderController@historicOrder')->name('adminOrders');
+
+    Route::get('historique/detail/{id}', 'AdminOrderController@detailOrder')->name('adminOrder');
+
 });
 

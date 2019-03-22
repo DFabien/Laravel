@@ -1,12 +1,30 @@
 @extends('layouts/layout')
 
 @section('title')
-    cat
+    Nos Categories de Bières
 
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi distinctio dolore, eos ex expedita
-        facilis impedit iste itaque non quae quisquam, quo. Exercitationem illo magni quaerat rem saepe veniam!
-    </p>
+ <a type="button" href={{route('adminCategoryAdd')}}>Ajouter une categorie</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Editer</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+        </thead>
+        <tbody> @foreach ($categories as $category)
+        <tr>
+            <td>{{$category->id}}</td>
+            <td>{{$category->category}}</td>
+            <td><i class="fas fa-highlighter"></i></td>
+            <td><i class="far fa-trash-alt"></i></td>
+        </tr>
+
+        </tbody>@endforeach
+    </table>
+
 @endsection
