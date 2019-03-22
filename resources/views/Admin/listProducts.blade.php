@@ -1,7 +1,7 @@
 @extends('layouts/admin/layout')
 
 @section('title')
-    listPdt
+listPdt
 @endsection
 
 @section('content')

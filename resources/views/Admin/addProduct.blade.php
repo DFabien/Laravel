@@ -1,4 +1,4 @@
-@extends('layouts/layout')
+@extends('layouts/admin/layout')
 
 @section('title')
 addProd
@@ -7,9 +7,18 @@ addProd
 @section('content')
 <div class="container">
     <h1 class="titre-principal"> Add a product </h1>
+    
     <form action={{route('adminPdtAdd')}} method="post">
         @method('PUT')
         @csrf
+        
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger">
+            {{ $error }}
+        </div>
+        @endforeach
+        @endif
         
         <div class="form-group">
             <label for="name">Name</label><br>
@@ -41,15 +50,15 @@ addProd
         </div>
         
         <div class="form-group">
-                <label for="objet">Discount</label><br>
-                <select name="discount">
-                    <option value="" disabled="" selected="">Choose</option>
-                    @foreach ($discounts as $discount)
-                    <option value="{{$discount->id}}"> {{$discount->name}} </option>
-                    @endforeach
-                </select>
-            </div>
-
+            <label for="objet">Discount</label><br>
+            <select name="discount">
+                <option value="" disabled="" selected="">Choose</option>
+                @foreach ($discounts as $discount)
+                <option value="{{$discount->id}}"> {{$discount->name}} </option>
+                @endforeach
+            </select>
+        </div>
+        
         <div class="form-group">
             <label for="objet">Category</label><br>
             <select required name="categorie">
