@@ -1,12 +1,22 @@
-@extends('layouts/layout')
+@extends('layouts/admin/layout')
 
 @section('title')
-    upCat
+    upCtg
 @endsection
 
 @section('content')
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam architecto at, dicta dolor ipsam
-        maiores nesciunt nisi quidem, sunt ullam vitae voluptatem. Deleniti eligendi esse incidunt quos recusandae,
-        vero?
-    </p>
+ <h1>Nom de Zeus! Modifier une categorie</h1>
+ <form action={{route('adminCategoryMaj', $cat->id) }} method="post">
+
+            @method('PUT')
+        @csrf
+        {{--<div><label>Nom actuel </label> --><input type ="text" name="oldname" value="{{$category->category}}"></div>--}}
+        {{--<div><label>Nouveau nom </label>--><input type="text" name="newname" value="{{$category->category}}"></div>--}}
+
+            <div><label>Nom actuel </label> --><input type ="text" name="nomcat" value="{{$cat->category}}"></div>
+
+        <div><input type="submit"></div>
+
+    </form>
+
 @endsection

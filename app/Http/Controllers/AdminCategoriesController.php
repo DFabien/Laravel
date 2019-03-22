@@ -22,10 +22,7 @@ class AdminCategoriesController extends Controller
         $cat->category = $name;
         $cat->save();
 
-        //Category::create(['category'=>$name]);
-        $categories=Category::all();
-        return view('Admin/category',['categories'=>$categories]);
-        //return redirect()-> route('adminCategories');
+        return redirect(route('adminCategories'));
     }
 
     public function addCat(){
@@ -33,9 +30,41 @@ class AdminCategoriesController extends Controller
         return view('Admin/addCategory');
     }
 
-    public function updateCat($id){
-        return view('Admin.updateCategory');
+    public function updateCat( $id){
+
+        //recuperer le champ category (nom) de la table category
+        // grace au model
+        $cat =Category::find($id);
+
+        //$name = $request->input('nom');
+
+       // $cat = Category::find($id);
+//        $cat->category = $name;
+//        $cat->save();
+
+
+
+        return view('Admin.updateCategory',['cat'=>$cat]);
     }
+
+    public function majCat(Request $request, $id){
+
+        $name = $request->input('nomcat');
+
+        $cat =Category::find($id);
+        $cat->category = $name;
+        $cat->save();
+
+        return redirect(route('adminCategories'));
+
+
+
+
+
+
+
+    }
+
 
     public function deleteCat($id){
         return view('Admin.category');
