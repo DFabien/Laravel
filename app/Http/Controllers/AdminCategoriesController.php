@@ -36,11 +36,7 @@ class AdminCategoriesController extends Controller
         // grace au model
         $cat =Category::find($id);
 
-        //$name = $request->input('nom');
 
-       // $cat = Category::find($id);
-//        $cat->category = $name;
-//        $cat->save();
 
 
 
@@ -56,10 +52,6 @@ class AdminCategoriesController extends Controller
         $cat->save();
 
         return redirect(route('adminCategories'));
-
-
-
-
 
 
 
