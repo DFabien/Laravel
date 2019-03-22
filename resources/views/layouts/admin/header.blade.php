@@ -6,19 +6,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('adminProducts') }}">Produits</a>
+                <a class="nav-link" href="{{route('adminProducts')}}">Produits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Categories</a>
+                <a class="nav-link" href="{{route('adminCategories')}}">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Commandes</a>
+                <a class="nav-link" href="{{route('adminOrders')}}">Commandes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('adminDiscount') }}">Codes promo</a>
+                <a class="nav-link" href="{{route('adminDiscount')}}">Codes promo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('adminDelivery') }}">Livraison</a>
+                <a class="nav-link" href="{{route('adminDelivery')}}">Livraison</a>
             </li>
         </ul>
     </div>
