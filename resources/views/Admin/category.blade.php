@@ -7,7 +7,7 @@
 
 @section('content')
  <a type="button" href={{route('adminCategoryAdd')}}>Ajouter une categorie</a>
-    <table class="table table-striped">
+        <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col">id</th>
@@ -20,7 +20,7 @@
         <tr>
             <td>{{$category->id}}</td>
             <td>{{$category->category}}</td>
-            <td><i class="fas fa-highlighter"></i></td>
+            <td> <a type="button" href="{{route('adminCategoryEdit',$category->id)}}"><i class="fas fa-highlighter"></i></a></td>
             <td><i class="far fa-trash-alt"></i></td>
         </tr>
 
