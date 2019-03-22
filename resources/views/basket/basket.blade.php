@@ -9,23 +9,6 @@
         <h1 class="titre-principal">Panier</h1>
         <div class="row">
 
-            {{--@foreach($produits as $produit)--}}
-            {{--<div>--}}
-            {{--<div class="col-lg-4 produit">--}}
-            {{--<img class="images" src="{{ asset("/images/bieres/".$produit['produit']->photo)}}" alt="Photo de {{$produit['produit']->name}}"/>--}}
-
-            {{--</div>--}}
-            {{--<h1 class="col-lg-8 produit"><strong>{{$produit['produit']->name}}</strong><br>--}}
-            {{--<p>{{$produit['produit']->price/100}}€</p><br>--}}
-            {{--<h1 class="titre-principal"</h1>--}}
-
-            {{--<a class="btn" href="{{route('basketDelete', $produit['produit']->id)}}" > Supprimer  </a>--}}
-            {{--<input type="number" name="nombres" min="0" max="{{ $produit['produit']->stock }}" value="{{$produit['quantity']}}">--}}
-
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--@endforeach--}}
-
             <table class="table panier">
                 <thead>
                 <tr>
@@ -71,13 +54,14 @@
                                 @csrf
 
 
-                            <button type="button" class="fas fa-trash" data-toggle="modal" data-target="{{'#modal' . $produit['produit']->id }}"></button>
+                                <button type="button" class="fas fa-trash" data-toggle="modal"
+                                        data-target="{{'#modal' . $produit['produit']->id }}"></button>
 
 
                                 @include ('layouts.modalDelete')
                             </form>
 
-                       </td>
+                        </td>
                     </tr>
                 @endforeach
 
@@ -97,9 +81,8 @@
 
                 <span>
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button>
-                @include ('layouts/modalErase')
+                    @include ('layouts/modalErase')
             </span>
             </form>
-            {{--{{$total}}--}}
         </div>
 @endsection

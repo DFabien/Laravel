@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Products_Model;
+use App\Article;
 
 class BasketController extends Controller
 {
@@ -24,7 +24,7 @@ class BasketController extends Controller
 
     public function update(Request $request, $id){
 
-        $panier= Products_Model::find($id);
+        $panier= Article::find($id);
         $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
 
         return redirect(route('basket'));
@@ -60,7 +60,7 @@ class BasketController extends Controller
     public function add(Request $request , $id){
 
 
-        $panier= Products_Model::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
+        $panier= Article::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
         $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
 
 

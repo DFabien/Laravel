@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 
 @section('title')
-    Yoga
+    {{$produit->name}}
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 
         <div class="row">
             <div class="col-lg-6 produit">
-                <img class="image" src="{{asset("/images/".$produit->photo)}}" alt="Photo de "/>
+                <img class="image" src="{{asset("/images/bieres/".$produit->photo)}}" alt="Photo de "/>
             </div>
             <div class="col-lg-6 desc">
                 <h3>{{$produit->name}}</h3><br>
@@ -28,5 +28,3 @@
         </div>
     </div>
 @endsection
-
-K
