@@ -79,11 +79,18 @@
                 @method('DELETE')
                 @csrf
 
-                <span>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button>
+                <p>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button></p>
                     @include ('layouts/modalErase')
-            </span>
+               </p>
             </form>
+
+
         </div>
+
+        <form action="{{ route('basketSave') }}" method="POST">
+            @csrf
+            <input type="submit" value="Valider la commande" class="btn-ico btn-ico-green">
+        </form>
     </div>
 @endsection

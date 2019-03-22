@@ -39,6 +39,8 @@ Route::prefix('panier')->group(function () {
     Route::get('{codePromo}', 'BasketController@discount')->name('basketDiscount'); // route vers
 
     Route::put('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
+
+    Route::post('/save', 'BasketController@save')->name('basketSave');
 });
 
 // User routes
