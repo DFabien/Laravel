@@ -9,7 +9,10 @@ use App\Customer;
 
 class AdminOrderController extends Controller
 {
-    
+    public function __construct(){
+        $this->middleware(['auth', 'isAdmin']);
+    }
+
     public function historicOrder(){
         $orders = Order::all();
         $articles = Article::all();

@@ -8,6 +8,10 @@ use App\Order;
 
 class AdminController extends Controller
 {
+    public function __construct(){
+        $this->middleware(['auth', 'isAdmin']);
+    }
+
     public function home(){
         $orders = Order::all()->sortByDesc('date')->take(10);
         $articles = Article::all()->sortBy('stock')->take(10);

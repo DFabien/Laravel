@@ -9,7 +9,10 @@ use App\Discount;
 
 class AdminProductsController extends Controller
 {
-    
+    public function __construct(){
+        $this->middleware(['auth', 'isAdmin']);
+    }
+
     public function showProdsAll(){
         $produits = Article::all();
         return view('Admin/listProducts',['liste'=>$produits]); //listProducts = nom de la vue

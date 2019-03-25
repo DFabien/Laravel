@@ -8,6 +8,9 @@ use App\Discount;
 
 class AdminDiscountController extends Controller
 {
+    public function __construct(){
+        $this->middleware(['auth', 'isAdmin']);
+    }
 
     public function showDiscAll(){
         $discounts = Discount::All();
