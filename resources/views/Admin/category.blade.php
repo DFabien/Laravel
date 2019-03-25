@@ -21,8 +21,10 @@
             <td>{{$category->id}}</td>
             <td>{{$category->category}}</td>
             <td> <a type="button" href="{{route('adminCategoryEdit',$category->id)}}"><i class="fas fa-highlighter"></i></a></td>
-            <td><i class="far fa-trash-alt"></i></td>
+            <td><a type="button" href="{{route('adminCategoryDelete',$category->id)}}"><i class="far fa-trash-alt"></i></td>
         </tr>
+
+
 
         </tbody>@endforeach
     </table>

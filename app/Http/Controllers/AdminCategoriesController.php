@@ -59,7 +59,21 @@ class AdminCategoriesController extends Controller
 
 
     public function deleteCat($id){
-        return view('Admin.category');
-    }
+
+            $supprimer=Category::find($id);
+            $supprimer->delete();
+            return redirect('admin/categories');
+        }
+
+        public function confirmsupp($id){
+            $cat=Category::find($id);
+
+        return view('Admin/suppCategory',['a'=>$cat]);
+
+       // ici $cat c'est une categorie qui meurt ici (portée)
+            //a c'est la clé qu'on appelle dans le formulaire
+        }
+
+
 
 }
