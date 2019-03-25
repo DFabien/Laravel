@@ -52,19 +52,13 @@
                             <form action="{{route('basketDelete', $produit['produit']->id)}}" method="post">
                                 @method('DELETE')
                                 @csrf
-
-
                                 <button type="button" class="fas fa-trash" data-toggle="modal"
                                         data-target="{{'#modal' . $produit['produit']->id }}"></button>
-
-
                                 @include ('layouts.modalDelete')
                             </form>
-
                         </td>
                     </tr>
                 @endforeach
-
                 <tr>
                     <td></td>
                     <td></td>
@@ -78,19 +72,18 @@
             <form action="{{route('basketErase')}}" method="post">
                 @method('DELETE')
                 @csrf
-
                 <p>
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button></p>
                     @include ('layouts/modalErase')
                </p>
             </form>
-
-
         </div>
+        @if(Auth::user())
+            <a href="{{ route('infos') }}" class="btn-ico btn-ico-green">Valider la commande</a>
+            @else
+            <p>Veuillez-vous connecter ou créer un compte pour finaliser la commande</p>
+            <p><a href="{{ route('login') }}" class="btn-ico btn-ico-blue">Se connecter</a> <a href="{{ route('register') }}" class="btn-ico btn-ico-blue">Créer un compte</a></p>
+        @endif
 
-        <form action="{{ route('basketSave') }}" method="POST">
-            @csrf
-            <input type="submit" value="Valider la commande" class="btn-ico btn-ico-green">
-        </form>
     </div>
 @endsection

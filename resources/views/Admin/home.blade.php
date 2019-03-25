@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ date('d-m-Y', strtotime($order->date)) }}</td>
                             <td class="center">{{ $total }} €</td>
-                            <td class="center">lien</td>
+                            <td class="center"><a class="btn-ico btn-ico-blue" href="{{ route('adminOrder', ['id' => $order->id ]) }}"><i class="fas fa-eye"></i></a></td>
                         </tr>
                     @endforeach
                     </tbody>

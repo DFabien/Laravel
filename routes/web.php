@@ -41,7 +41,29 @@ Route::prefix('panier')->group(function () {
     Route::put('ajout/{id}', 'BasketController@add')->name('basketAdd'); // route vers
 
     Route::post('/save', 'BasketController@save')->name('basketSave');
+
+
 });
+
+// Customer
+
+Route::get('/mes-informations', 'CustomerController@show')->name('infos');
+
+Route::get('/mes-informations/ajout', 'CustomerController@add')->name('infosAdd');
+
+Route::get('/mes-informations/edition', 'CustomerController@update')->name('infosUpdate');
+
+Route::post('/mes-informations/store', 'CustomerController@store')->name('infosStore');
+
+Route::put('/mes-informations/store', 'CustomerController@storeUpdate')->name('infosStoreUpdate');
+
+// Address
+
+Route::get('/ajout-adresse', 'AddressController@add')->name('addressAdd');
+Route::post('/ajout-adresse', 'AddressController@store')->name('addressStore');
+Route::get('/modification-adresse/{id}', 'AddressController@update')->name('addressUpdate');
+Route::put('/modificatio-adresse', 'AddressController@storeUpdate')->name('addressStoreUpdate');
+
 
 // User routes
 

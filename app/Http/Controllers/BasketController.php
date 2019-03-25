@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Order;
+use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
@@ -74,8 +75,8 @@ class BasketController extends Controller
         $articles = $request->session()->get('basket', []);
 
         $order = new Order();
-        $order->customer_id = 1;
-        $order->address_id = 1;
+        $order->customer_id = Auth::user()->customer->id;
+        $order->address_id = $request->address_id;
         $order->save();
 
         foreach ($articles as $article){
