@@ -74,6 +74,10 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
     Route::post('categories/add', 'AdminCategoriesController@store')->name('adminCategoryStore');
 
+    Route::delete('categories/delete/{id}', 'AdminCategoriesController@deletecat')->name('adminCategoryDelete');
+    Route::get('categories/delete/{id}', 'AdminCategoriesController@confirmsupp')->name('adminCategoryConfSupp');
+
+
     //AdminProductsController
 
     Route::get('produit/add', 'AdminProductsController@addProd')->name('adminProductAdd');
