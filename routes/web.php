@@ -124,3 +124,7 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
