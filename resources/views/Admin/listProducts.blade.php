@@ -33,7 +33,7 @@ listPdt
         <td class="center">{{$produit->price}}</td>
         <td class="center">{{$produit->stock}}</td>
 
-          //si le produit n'a pas de categorie alors afficher "Null"
+        <!--si le produit n'a pas de categorie alors afficher "Null"-->
         @if($produit->category)
           <td class="center">{{$produit->category->id}} - {{$produit->category->category}}</td>
         @else
