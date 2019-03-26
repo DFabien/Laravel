@@ -60,7 +60,7 @@ Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// 
 
 //Admin Routes
 
-Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
+Route::prefix('admin')->middleware('auth')->group(function () { // prefix url ex: admin/categories
 
     // AdminCategoriesController
 
@@ -128,3 +128,7 @@ Route::prefix('admin')->group(function () { // prefix url ex: admin/categories
 
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
