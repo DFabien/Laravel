@@ -13,8 +13,16 @@ class adminMiddle
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        return $next($request);
+    public function handle($request, Closure $next){
+//dd("hello");
+        $user = $request->user();
+
+        if($user && $user->admin === 1){
+
+            return $next($request);
+        }
+
+
+        return redirect()->route('homepage');
     }
 }
