@@ -8,6 +8,8 @@ use App\Category;
 
 class AdminCategoriesController extends Controller
 {
+
+
     public function showCatAll(){
         $categories=Category::all();
 

@@ -1,4 +1,7 @@
+
 @extends('layouts/layout')
+
+
 
 @section('title')
     Accueil

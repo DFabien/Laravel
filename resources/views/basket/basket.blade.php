@@ -80,9 +80,12 @@
                 @csrf
 
                 <p>
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1">Vider le Panier</button></p>
-                    @include ('layouts/modalErase')
-               </p>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                            data-target="#exampleModal1">Vider le Panier
+                    </button>
+                </p>
+                @include ('layouts/modalErase')
+                </p>
             </form>
 
 
