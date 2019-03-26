@@ -6,8 +6,8 @@
 
 @section('content')
 
-    <p>{{$products->nom}} </p>
-    <p>{{$products->price}}€</p>
+    <p>{{$articles->name}} </p>
+    <p>{{$articles->price}}€</p>
 
     @endsection
 
