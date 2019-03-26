@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <h3>Choissir une adresse</h3>
+        <h3>Choisir une adresse</h3>
         <div>
             @if(!Auth::User()->customer || (count(Auth::User()->customer->addresses) == 0))
                 <a href="{{ route('infos') }}" class="btn-ico btn-ico-blue">Ajouter une adresse</a>

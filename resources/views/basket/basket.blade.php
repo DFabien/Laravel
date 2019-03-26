@@ -7,8 +7,7 @@
 @section('content')
     <div class="container-fluid">
         <h1 class="titre-principal">Panier</h1>
-        <div class="row">
-
+        <div>
             <table class="table panier">
                 <thead>
                 <tr>
@@ -19,12 +18,10 @@
                     <th scope="col">quantity</th>
                     <th scope="col">Prix Total</th>
                     <th :scope="col"></th>
-
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($produits as $produit)
-
                     <tr>
                         <td>
                             <img class="images" src="{{ asset("/images/bieres/".$produit['produit']->photo)}}"
