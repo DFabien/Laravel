@@ -11,7 +11,6 @@ class BasketController extends Controller
     public function show(Request $request){
 
         $produits = $request->session()->get('basket', []);
-
         $total=0;
 
         foreach ($produits as $produit){
@@ -44,6 +43,8 @@ class BasketController extends Controller
 
 
     public function erase(Request $request){
+
+        //vider/supprimer le panier en entier
 
         $request->session()->forget('basket');
 

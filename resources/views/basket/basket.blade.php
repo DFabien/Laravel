@@ -57,7 +57,6 @@
                                 <button type="button" class="fas fa-trash" data-toggle="modal"
                                         data-target="{{'#modal' . $produit['produit']->id }}"></button>
 
-
                                 @include ('layouts.modalDelete')
                             </form>
 
