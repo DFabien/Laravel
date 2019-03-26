@@ -19,7 +19,6 @@
                 <a class="nav-link" href="{{route('basket')}}">Mon panier</a>
             </li>
             <li class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

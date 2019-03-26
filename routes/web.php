@@ -43,9 +43,9 @@ Route::prefix('panier')->group(function () {
     Route::post('/save', 'BasketController@save')->name('basketSave');
 });
 
-// User routes
+// User routes 
 
-Route::prefix('mon-compte')->group(function () {
+Route::prefix('mon-compte')->middleware('auth')->group(function () {
     Route:: get('/', 'UserController@profil')->name('userAccount');// route vers la page " Mon compte"
 
     Route:: get('modification', 'UserController@updateAccount')->name('userUpdate');//route vers la page "Mon compte"
@@ -60,7 +60,7 @@ Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// 
 
 //Admin Routes
 
-Route::prefix('admin')->middleware('auth')->group(function () { // prefix url ex: admin/categories
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () { // prefix url ex: admin/categories
 
     // AdminCategoriesController
 
