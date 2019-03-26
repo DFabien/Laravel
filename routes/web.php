@@ -30,6 +30,8 @@ Route::prefix('panier')->group(function () {
 
     Route::get('/', 'BasketController@show')->name('basket'); // route vers le panier
 
+    Route::get('informations', 'BasketController@infos')->name('basketInfos');
+
     Route::put('modification/{id}', 'BasketController@update')->name('basketUpdate'); // route vers
 
     Route::delete('suppression/{id}', 'BasketController@delete')->name('basketDelete'); // route vers
@@ -63,7 +65,6 @@ Route::get('/ajout-adresse', 'AddressController@add')->name('addressAdd');
 Route::post('/ajout-adresse', 'AddressController@store')->name('addressStore');
 Route::get('/modification-adresse/{id}', 'AddressController@update')->name('addressUpdate');
 Route::put('/modificatio-adresse', 'AddressController@storeUpdate')->name('addressStoreUpdate');
-
 
 // User routes
 

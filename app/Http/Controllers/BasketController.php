@@ -90,4 +90,8 @@ class BasketController extends Controller
         return redirect(route('products'));
     }
 
+    public function infos(){
+        return view('basket.infos');
+    }
+
 }

@@ -79,11 +79,10 @@
             </form>
         </div>
         @if(Auth::user())
-            <a href="{{ route('infos') }}" class="btn-ico btn-ico-green">Valider la commande</a>
+            <a href="{{ route('basketInfos') }}" class="btn-ico btn-ico-green">Choisir une adresse de livraison</a>
             @else
             <p>Veuillez-vous connecter ou créer un compte pour finaliser la commande</p>
             <p><a href="{{ route('login') }}" class="btn-ico btn-ico-blue">Se connecter</a> <a href="{{ route('register') }}" class="btn-ico btn-ico-blue">Créer un compte</a></p>
         @endif
-
     </div>
 @endsection

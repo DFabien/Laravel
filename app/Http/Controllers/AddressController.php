@@ -46,4 +46,5 @@ class AddressController extends Controller
 
         return redirect(route('infos'));
     }
+
 }
