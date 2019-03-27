@@ -25,7 +25,9 @@ class BasketController extends Controller
     public function update(Request $request, $id){
 
         $panier= Article::find($id);
-        $request->session()->put('basket.'.$id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
+        $request->session()->put('basket.' . $panier->id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
+                                 //   resultat identique:
+        //$request->session()->put('basket.' . $id, ['produit'=>$panier,'quantity'=>$request->input('quantity')] );
 
         return redirect(route('basket'));
     }
