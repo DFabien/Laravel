@@ -6,10 +6,10 @@
 
 @section('content')
 
-    <div class="topHomePage">
+    <div class="topPage topHomePage">
         <div class="container">
             <div class="row">
-                <div class="homeTopContent col-lg-6 col-sm-12">
+                <div class="TopContent col-lg-6 col-sm-12">
                     <h3>SquirrelBeers</h3>
 
                     <h1>Craft Beer ShopCave à bières artisanales</h1>
@@ -59,13 +59,6 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
-
-
-
-
 @endsection
 

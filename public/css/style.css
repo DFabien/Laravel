@@ -110,22 +110,18 @@ iframe{
 .titre-secondaire{
     margin-bottom: 30px;
 }
-/******************************************************************
-    Home
-******************************************************************/
-.topHomePage{
-    background-image: url("../images/homeback.jpg");
+.topPage{
     min-height: 500px;
     background-position-x: center;
     color: white;
 }
-.topHomePage h3, .topHomePage h1, .topHomePage p{
+.topPage h3, .topPage h1, .topPage p{
     margin-bottom: 20px;
 }
-.topHomePage h3{
+.topPage h3{
     font-weight: bold;
 }
-.topHomePage a{
+.topPage a{
     display: inline-block;
     border: none;
     padding: 10px 20px;
@@ -136,12 +132,18 @@ iframe{
     transition-duration: 0.7s;
     text-decoration: none;
 }
-.topHomePage a:hover{
+.topPage a:hover{
     background-color: white;
     color: #F38A1E;
 }
-.homeTopContent{
+.TopContent{
     padding: 30px 10px;
+}
+/******************************************************************
+    Home
+******************************************************************/
+.topHomePage{
+    background-image: url("../images/homeback.jpg");
 }
 .brasseries{
     margin-top: 80px;
@@ -160,21 +162,95 @@ iframe{
 /******************************************************************
     Products
 ******************************************************************/
-.productList img{
-    height: 200px;
-}
-.productList{
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 10px;
-}
-.containerListProduit {
-    margin-bottom: 20px;
+.topProductPage{
+    background-image: url("../images/productback.jpg");
 }
 .flexPosition{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.selecteur{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.selecteur .btnTri{
+    border: 1px solid rgba(0,0,0,.1);
+    color: #F38A1E;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+}
+.selecteur .btnTri:hover{
+    background-color: #F38A1E;
+    color: white;
+}
+.selecteur .btnTriSelected{
+    border: 1px solid rgba(0,0,0,.1);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+    background-color: #F38A1E;
+}
+.products{
+    border:1px solid rgba(0,0,0,.1);
+    background-color: white;
+}
+.products img{
+    max-width: 100%;
+    max-height: 200px;
+}
+.productList{
+    margin-bottom: 40px;
+}
+.productImg{
+    padding: 20px;
+}
+.productName{
+    border-top: 1px solid #F38A1E;
+    border-right: 1px solid #F38A1E;
+    border-left: 1px solid #F38A1E;
+}
+.productName h5{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+}
+.products p{
+    margin-bottom: 0px !important;
+}
+.productPrice{
+    width: 50%;
+    float: left;
+    display: inline-block;
+    border: 1px solid #F38A1E;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.productLink{
+    width: 50%;
+    display: inline-block;
+    border-right: 1px solid #F38A1E;
+    border-top: 1px solid #F38A1E;
+    border-bottom: 1px solid #F38A1E;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.productLink a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+.productLink a:hover{
+    color: #F38A1E;
+    text-decoration: none;
 }
 /******************************************************************
     Basket

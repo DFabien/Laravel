@@ -8,18 +8,22 @@ use App\Article;
 
 class ProductController extends Controller
 {
-    public function showAll()
+    public function showAll(Request $request)
     {
-        //$produits = Products_Model::where('id_cat', 1)->get(); //fonction qui permet de selectionner la catégorie 1 dans mon tableau qui correspond à mon model
-        $produits = Article::all();
-        return view('products/product',['liste'=>$produits]);
+        if($request->has('sort')){
+            $produits = Article::all()->sortBy('price');
+            $selected = "price";
+        } else {
+            $produits = Article::all()->sortBy('name');
+            $selected = "name";
+        }
+
+        return view('products/product',['liste'=>$produits, 'selected' => $selected]);
     }
 
 
     public function show($id){
         $details= Article::find($id);   //fonction qui permet d'afficher uniquement l'article voulu.
-
-
         return view('products/description', ['produit'=>$details]);
     }
 }
