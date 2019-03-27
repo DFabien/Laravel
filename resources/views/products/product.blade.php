@@ -30,7 +30,7 @@
                 <div class="col-lg-4 col-sm-6 col-12 productList">
                     <div class="products">
                         <div class="center productImg">
-                            <img src="{{ asset("/images/bieres/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/>
+                            <a href="{{route('description', ['id'=>$produit->id])}}"><img src="{{ asset("/images/bieres/".$produit->photo)}}" alt="Photo de {{$produit->name}}"/></a>
                         </div>
                         <div class="productName">
                             <h5 class="center"><strong>{{$produit->name}}</strong></h5>
