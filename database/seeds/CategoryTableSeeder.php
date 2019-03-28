@@ -30,7 +30,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id_category' => 5,
-                'category' => 'Jester King',
+                'category' => 'Boostels',
             ],
 
         ]);
