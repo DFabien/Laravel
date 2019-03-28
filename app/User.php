@@ -28,4 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     public $timestamps=false;
+
+    public function customer(){
+        return $this->hasOne('App\Customer');
+    }
 }

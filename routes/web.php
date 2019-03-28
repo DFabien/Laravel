@@ -49,6 +49,7 @@ Route::prefix('mon-compte')->middleware('auth')->group(function () {
     Route:: get('/', 'UserController@profil')->name('userAccount');// route vers la page " Mon compte"
 
     Route:: get('modification', 'UserController@updateAccount')->name('userUpdate');//route vers la page "Mon compte"
+    Route:: put('modification', 'UserController@updateAccount2')->name('userUpdate2');//route vers la page "Mon compte"
 
     Route:: get('suppression/{id}', 'UserController@index')->name('userDelete'); // route vers la page Accueil
 });

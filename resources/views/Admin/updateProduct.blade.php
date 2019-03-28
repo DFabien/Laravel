@@ -26,7 +26,7 @@
             <div class="form-group">
                 <label for="desc">Description</label><br>
                 <input id="decription" type="text" name="description" class="form-control"
-                       value="{{$articles->description}}" required>
+                    value="{{$articles->description}}" required>
             </div>
 
             <div class="form-group">
@@ -37,19 +37,19 @@
             <div class="form-group">
                 <label for="px">Price</label><br>
                 <input id="prix" min=0 type="number" name="prix" class="form-control" value="{{$articles->price}}"
-                       required>
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="poids">Weight</label><br>
                 <input id="weight" min=0 type="number" name="poids" class="form-control" value="{{$articles->weight}}"
-                       required>
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="stock">Stock</label><br>
                 <input id="stock" min=0 type="number" name="stock" class="form-control" value="{{$articles->stock}}"
-                       required>
+                    required>
             </div>
 
             <div class="form-group">
