@@ -55,11 +55,6 @@ Route::prefix('mon-compte')->middleware('auth')->group(function () {
     Route:: get('suppression/{id}', 'UserController@index')->name('userDelete'); // route vers la page Accueil
 });
 
-Route :: get('/mes-commandes', 'UserController@showOrdersAll')->name('orders');//route vers la page "Mes Commandes"
-
-Route :: get('/ma-commande/{id}', 'UserController@showOrder')->name('order');// route vers la page "Commande"
-
-
 //Admin Routes
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () { // prefix url ex: admin/categories

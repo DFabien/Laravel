@@ -88,8 +88,5 @@ class UserController extends Controller
             public function showOrdersAll(){
                 return view('User.orders');
             }
-            
-            public function showOrder($id){
-                return view('User.orderDetail');
-            }
+
         }
