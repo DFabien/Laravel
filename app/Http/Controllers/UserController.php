@@ -15,8 +15,25 @@ class UserController extends Controller
     
     public function profil(){
         $user = Auth::user();
-        // dd($user->customer->orders[0]->articles[0]->pivot->qty);
-        return view('User.view', ['user' => $user]);
+        $orders = Order::where('customer_id', $user->customer->id)->get();
+
+        $listOfOrders = [];
+
+        foreach ($orders as $order){
+
+            $quantity = 0;
+            $total =0;
+
+            foreach ($order->articles as $article){
+                $quantity += $article->pivot->qty;
+                $total += $article->pivot->qty * $article->price;
+            }
+            $currentOrder = ['order' => $order, 'quantity' => $quantity, 'total'=> $total];
+
+            array_push($listOfOrders, $currentOrder);
+        }
+
+        return view('User.view', ['user' => $user, 'listOfOrders' => $listOfOrders]);
     }
     
     public function updateAccount(Request $request, $id){
