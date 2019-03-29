@@ -13,7 +13,7 @@
                <th>Nom</th>
                <th class="center">Date de début</th>
                <th class="center">Date de fin</th>
-               <th class="center">Réduction</th>
+               <th class="center">produits</th>
                <th class="center">Action</th>
            </tr>
            @foreach($discounts as $discount)
@@ -21,6 +21,17 @@
                    <td>{{ $discount->name }}</td>
                    <td class="center">{{  date('d-m-Y', strtotime($discount->start_date)) }}</td>
                    <td class="center">{{  date('d-m-Y', strtotime($discount->end_date)) }}</td>
+                   <!-- Afficher les produits ayant une promo -->
+
+                   @foreach($discount->articles as $article)
+                       <p>{{$article->name}}</p>
+                       <p>{{$article->price/100}} euros</p>
+                   @endforeach
+
+
+
+
+                   <td class="center"></td>
                    @if($discount->promo_type == 1)
                        <td class="center">- {{ $discount->value }} %</td>
                    @else
