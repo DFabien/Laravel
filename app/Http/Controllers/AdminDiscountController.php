@@ -29,8 +29,12 @@ class AdminDiscountController extends Controller
         return redirect(route('adminDiscount'));
     }
     public function store(Request $request){
-        $discount = new Discount();
+        $request->validate([
+            'name' => 'required|between:3,255|alpha',
+            'value'=>'required|numeric|min:0',
 
+        ]);
+        $discount = new Discount();
         $discount->start_date =  date("Y-m-d", strtotime($request->input('start_date')) ); //formate la date pour la passer de la version anglaise à francaise
         $discount->end_date = date("Y-m-d", strtotime($request->input('end_date')) );
 

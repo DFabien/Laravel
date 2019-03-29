@@ -22,10 +22,10 @@
             <td>{{$category->category}}</td>
 
             <!--  exo je veux une boucle qui affiche tous les articles -->
-            <td>{{$category->articles}}</td>
-            @foreach($category->articles as $article)
-                <p>{{$article->name}}</p>
-                @endforeach
+            {{--<td>{{$category->articles}}</td>--}}
+            {{--@foreach($category->articles as $article)--}}
+                {{--<p>{{$article->name}}</p>--}}
+                {{--@endforeach--}}
 
 
 

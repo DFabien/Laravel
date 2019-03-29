@@ -21,11 +21,12 @@
                    <td>{{ $discount->name }}</td>
                    <td class="center">{{  date('d-m-Y', strtotime($discount->start_date)) }}</td>
                    <td class="center">{{  date('d-m-Y', strtotime($discount->end_date)) }}</td>
+
                    <!-- Afficher les produits ayant une promo -->
 
                    @foreach($discount->articles as $article)
-                       <p>{{$article->name}}</p>
-                       <p>{{$article->price/100}} euros</p>
+                   <td> {{$article->name}}  {{$article->price/100}} euros</td>
+
                    @endforeach
 
 
