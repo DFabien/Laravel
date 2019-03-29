@@ -74,6 +74,9 @@ body{
 .center{
     text-align: center;
 }
+.right{
+    text-align: right;
+}
 .btn-ico{
     border: none;
     color: white;
@@ -115,13 +118,13 @@ iframe{
     background-position-x: center;
     color: white;
 }
-.topPage h3, .topPage h1, .topPage p{
+.topPage h3, .topPage h1, .topPage p, .topPageBasket h3, .topPageBasket h1, .topPageBasket p{
     margin-bottom: 20px;
 }
-.topPage h3{
+.topPage h3, .topPageBasket h3{
     font-weight: bold;
 }
-.topPage a{
+.topPage a, .topPageBasket a{
     display: inline-block;
     border: none;
     padding: 10px 20px;
@@ -132,7 +135,7 @@ iframe{
     transition-duration: 0.7s;
     text-decoration: none;
 }
-.topPage a:hover{
+.topPage a:hover, .topPageBasket a:hover{
     background-color: white;
     color: #F38A1E;
 }
@@ -293,12 +296,55 @@ iframe{
 /******************************************************************
     Basket
 ******************************************************************/
-
+.panier {
+    margin-top: 40px;
+    background-color: white;
+}
+.panier th{
+    background-color: #F38A1E;
+    color: white;
+}
+.panier td{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    vertical-align: middle;
+}
 .panier img{
     height: 70px;
 }
-
-
+.topPageBasket{
+    min-height: 376px;
+    background-position-x: center;
+    color: white;
+}
+.topBasketPage{
+    background-image: url("../images/basketback.jpg");
+}
+.panier .fa-times-circle, .panier .fa-check-circle, #exampleModal1 .fa-check-circle,#exampleModal1 .fa-times-circle{
+    border: none;
+    background-color: white;
+    color: #F38A1E;
+    font-size: 25px;
+}
+.panier .fa-times-circle:hover, .panier .fa-check-circle:hover, #exampleModal1 .fa-check-circle:hover,#exampleModal1 .fa-times-circle{
+    color: #DA7C1D;
+}
+.panier input{
+    padding: 10px;
+    border: 1px solid rgb(0,0,0,0.1);
+}
+.basketValidation{
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #F38A1E;
+    transition-property: background-color, color;
+    transition-duration: 0.7s;
+}
+.basketValidation:hover{
+    background-color: #F38A1E;
+    color: white;
+}
 /******************************************************************
     Contact
 ******************************************************************/

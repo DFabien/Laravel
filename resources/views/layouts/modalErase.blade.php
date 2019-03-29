@@ -13,7 +13,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="far fa-times-circle" data-dismiss="modal"></button>
-                <button type="submit" class="fas fa-check-square"></button>
+                <button type="submit" class="far fa-check-circle"></button>
             </div>
         </div>
     </div>

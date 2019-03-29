@@ -21,7 +21,6 @@ class BasketController extends Controller
     }
 
 
-
     public function update(Request $request, $id){
 
         $panier= Article::find($id);
@@ -29,7 +28,6 @@ class BasketController extends Controller
 
         return redirect(route('basket'));
     }
-
 
 
     public function delete(Request $request,$id){
@@ -86,6 +84,8 @@ class BasketController extends Controller
 
             $order->articles()->attach($articleId, ['qty' => $quantity]);
         }
+
+        $request->session()->forget('basket');
 
         return redirect(route('products'));
     }
