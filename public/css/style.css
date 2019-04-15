@@ -153,8 +153,8 @@ iframe{
 }
 .brasseries h4{
     color: #F38A1E;
+    margin-top: -3%;
     text-align: center;
-    margin-bottom: 60px;
 }
 .brasseries .col div{
     text-align: center;
@@ -409,4 +409,172 @@ iframe{
 .adminDiscount{
     margin-top: 40px;
     background-color: white;
+}
+
+
+/******************************************************************
+    Plugin Home
+******************************************************************/
+.frame {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: -200px;
+    margin-bottom: 3%;
+    border-radius: 2px;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(177, 232, 241, 0.5);
+    overflow: hidden;
+    background: rgb(177, 232, 241);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: row;
+}
+
+.frame .pic {
+    padding: 8%;
+}
+
+.pic {
+    -webkit-animation: 1s appear;
+    animation: 1s appear;
+}
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.pic-1 {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+    -webkit-transform-origin: -9% 15%;
+    transform-origin: -9% 15%;
+}
+
+.pic-2 {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-transform-origin: 50% 15%;
+    transform-origin: 50% 15%;
+}
+
+.pic-3 {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+    -webkit-transform-origin: 109% 15%;
+    transform-origin: 109% 15%;
+}
+
+.pic-4 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-transform-origin: -9% 72%;
+    transform-origin: -9% 72%;
+}
+
+.pic-5 {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-transform-origin: 50% 75%;
+    transform-origin: 50% 75%;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(177, 232, 241, 0.7);
+    opacity: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay i {
+    color: white;
+    font-size: 200%;
+    -webkit-animation: pulsing 1s infinite;
+    animation: pulsing 1s infinite;
+}
+
+@-webkit-keyframes pulsing {
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulsing {
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+.pic {
+    overflow: hidden;
+}
+.pic:hover {
+    cursor: pointer;
+}
+.pic:hover .overlay {
+    left: 2%;
+    top: 2%;
+    width: 95%;
+    height: 95%;
+    opacity: 1;
+    transition: .3s ease-out;
+}
+
+.active {
+    transition: .5s ease-out;
+    -webkit-transform: scale(2.7);
+    transform: scale(2.7);
+    z-index: 2000;
+}
+.active img {
+    transition: .5s ease-in;
+    box-shadow: 0 0 1rem 1rem white;
+}
+.active .overlay {
+    display: none;
+}
+
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.underlay {
+    background-color: rgb(177, 232, 241);
+    transition: .5s;
+    z-index: 1;
 }
